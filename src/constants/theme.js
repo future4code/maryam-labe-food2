@@ -1,4 +1,17 @@
-export const primaryColor = "#5CB64650"
-export const neutralColor = "#000000"
-export const textColor = "#00000025"
-export const borderColor = "#00000025"
+import { createTheme }  from "@material-ui/core"
+import { primaryColor, neutralColor } from "./colors"
+
+const theme = createTheme({
+    palette:{
+        primary:{
+            main: primaryColor,
+            contrastext: "white",
+        },
+        text:{
+            primary: neutralColor,
+            secondary: "#D0D0D0", //gray
+        }
+    }
+})
+
+export default theme
