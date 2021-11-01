@@ -13,17 +13,17 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage"
 const RouterPage = () => {
     return (
         <BrowserRouter>
-        <Switch>
-            <Route exact path="/tela-inicial" component ={() => <HomePage />}/>
-            <Route exact path="/" component ={() => <InitialPage />}/>
-            <Route exact path="/login" component ={() => <LoginPage />}/>
-            <Route exact path="/cadastro" component ={() => <SingUpPage />}/>
-            <Route exact path="/endereco" component ={() => <AdressPage />}/>
-            <Route exact path="/perfil/:id" component ={() => <ProfilePage />}/>
-            <Route exact path="/restaurante/:id" component ={() => <RestaurantPage />}/>
-            <Route exact path="/carrinho" component ={() => <CartPage />}/>
-            <Route  path="*" component ={() => <ErrorPage />}/>
-        </Switch>
+            <Switch>
+                <Route exact path="/tela-inicial" component={() => <HomePage />} />
+                <Route exact path="/" component={() => <InitialPage />} />
+                <Route exact path="/login" component={() => <LoginPage />} />
+                <Route exact path="/cadastro" component={() => <SingUpPage />} />
+                <Route exact path="/endereco" component={() => <AdressPage />} />
+                <Route exact path="/perfil/:id" component={() => <ProfilePage />} />
+                <Route exact path="/restaurante/:id" component={() => <RestaurantPage />} />
+                <Route exact path="/carrinho" component={() => <CartPage />} />
+                <Route path="*" component={() => <ErrorPage />} />
+            </Switch>
         </BrowserRouter>
     )
 }
