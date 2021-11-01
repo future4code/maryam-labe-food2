@@ -1,16 +1,31 @@
-import React from "react"
+import React, { useState } from "react"
 import useForm from "../../hooks/useForm"
-import {ScreenContainer, LogoImage, InputsContainer, SignUpButtonContainer, Text} from "./style"
+import {ScreenContainer, LogoImage, InputsContainer, SignUpButtonContainer} from "./style"
 import logo from "../../assets/logo-future-eats-invert.png"
 import { Button, TextField, Typography } from "@material-ui/core"
 import {goToHome, goToSingUp} from "../../routes/coordinator"
 import { useHistory } from "react-router"
 import axios from "axios"
 import {BASE_URL} from "../../constants/urls"
+import Visibility from '@material-ui/icons/Visibility'
+import VisibilityOff from '@material-ui/icons/VisibilityOff'
+import InputAdornment from '@material-ui/core/InputAdornment'
+import IconButton from '@material-ui/core/IconButton'
+
 const LoginPage = () => {
 
     const history = useHistory()
     const [form, onChange, clear] = useForm({email: "", password: ""})
+    const [showPassword, setShowPassword] = useState(false)
+
+    const onClickShowPassword = () => {
+        setShowPassword(!showPassword)
+    }
+
+    const onMouseDownPassword = () => {
+        setShowPassword(!showPassword)
+    }
+
     const onSubmitForm = (event) => {
         event.preventDefault()
         login()
@@ -49,12 +64,25 @@ const LoginPage = () => {
                      name={"password"}
                      value={form.password}
                      onChange={onChange}
+                     InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <IconButton
+                              aria-label="toggle password visibility"
+                              onClick={onClickShowPassword}
+                              onMouseDown={onMouseDownPassword}
+                            >
+                              {showPassword ? <Visibility /> : <VisibilityOff />}
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }}
                      label={"Senha"}
                      variant={"outlined"}
                      fullWidth
                      margin={"normal"}
                      required
-                     type={"password"}
+                     type={showPassword ? 'text' : 'password'}
                      placeholder={"Mínimo de 6 caracteres"}
                      inputProps={{ pattern: "^.{6,}" }}
                    /> 
@@ -69,13 +97,16 @@ const LoginPage = () => {
                    </Button>
                </form>
             </InputsContainer>
-            <SignUpButtonContainer
-            onClick={() => goToSingUp(history)}
-              type={"submit"}
-              fullWidth
-              variant={"text"}
-            >
+            <SignUpButtonContainer>
+            <Button
+                    onClick={() => goToSingUp(history)}
+                    type={"submit"}
+                    fullWidth
+                    variant={"text"}
+                    color={"neutralColor"}
+                    >
                 Não possui cadastro? Clique aqui.
+                </Button>
             </SignUpButtonContainer>
 
         </ScreenContainer>
