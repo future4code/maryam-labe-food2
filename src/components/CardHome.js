@@ -29,7 +29,7 @@ const RestauranteNome = styled.span`
     font-style: normal;
     line-height: normal;
     letter-spacing: -0.39px;
-    color: #e8222e;
+    color: #5cb646;
 `
 
 const RestauranteTempo = styled.span`
@@ -70,7 +70,11 @@ const RestauranteCard = styled.div`
     width: 22.5rem;
     height: 12.25rem;
     margin: 3.125rem 0 0;
+    margin-right: 0;
+    margin-left: 0;
     padding: 0.5rem 1rem 0;
+    display: flex;
+    justify-content: center;
 `
 
 const ContainerNome = styled.div`
