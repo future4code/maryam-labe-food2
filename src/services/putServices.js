@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { BASE_URL } from '../constants/urls'
-import { goToRestaurant } from '../routes/coordinator'
+import { goToHome } from '../routes/coordinator'
 
 export const putAddAdress = ( body,history,cleanFields) => {
     const config = {
@@ -13,7 +13,7 @@ export const putAddAdress = ( body,history,cleanFields) => {
     axios(config)
         .then((res) => {
             localStorage.setItem('token',res.data.token)
-            goToRestaurant(history)
+            goToHome(history)
             cleanFields()
         })
         .catch((err) => {
