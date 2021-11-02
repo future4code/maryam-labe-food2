@@ -11,6 +11,15 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import IconButton from '@material-ui/core/IconButton'
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos'
+import { withStyles } from '@material-ui/core/styles'
+
+const StyledButton = withStyles({
+  root: {
+    padding: '0.7rem',
+    marginTop: '0.7rem',
+    marginBottom: '1rem'
+  }
+})(Button)
 
 const SignUpPage = () => {
     const [form, onChange, clear] = useForm({
@@ -41,6 +50,7 @@ const SignUpPage = () => {
     }
 
     return (
+      
         <ScreenContainer>
 
             <LogoImage src={logo}/>
@@ -143,14 +153,15 @@ const SignUpPage = () => {
                       }}
                    /> 
 
-                   <Button
+                   <StyledButton
                      type={"submit"}
                      fullWidth
                      variant={"contained"}
                      color={"primary"}
+                     padding={10}
                    >
                     { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Criar</> }
-                   </Button>
+                   </StyledButton>
                </form>
             </InputsContainer>
 
@@ -161,7 +172,7 @@ const SignUpPage = () => {
                 type="submit"
                 aria-label="ArrowBackIos"
                 >
-                <ArrowBackIos fontSize="large" />
+                <ArrowBackIos style={{fill: "black"}} fontSize="large" />
             </IconButton> 
             </ArrowBackContainer>
 

@@ -11,11 +11,22 @@ import Visibility from '@material-ui/icons/Visibility'
 import VisibilityOff from '@material-ui/icons/VisibilityOff'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import IconButton from '@material-ui/core/IconButton'
+import { withStyles } from '@material-ui/core/styles'
+import CircularProgress from '@material-ui/core/CircularProgress'
+
+const StyledButton = withStyles({
+    root: {
+      padding: '0.7rem',
+      marginTop: '0.7rem',
+      marginBottom: '1rem'
+    }
+  })(Button)
 
 const LoginPage = () => {
 
     const history = useHistory()
     const [form, onChange, clear] = useForm({email: "", password: ""})
+    const [isLoading, setIsLoading] = useState(false)
     const [showPassword, setShowPassword] = useState(false)
 
     const onClickShowPassword = () => {
@@ -32,13 +43,16 @@ const LoginPage = () => {
     }
 
     const login = () => {
+        setIsLoading(true)
         axios.post(`${BASE_URL}/login`, form)
         .then((res) => {
             localStorage.setItem("token", res.data.token)
             clear()
+            setIsLoading(false)
             goToHome(history)
         })
         .catch((error) => {
+            setIsLoading(false)
             alert("Erro no login")
         })
     }
@@ -87,14 +101,14 @@ const LoginPage = () => {
                      inputProps={{ pattern: "^.{6,}" }}
                    /> 
 
-                   <Button
+                   <StyledButton
                      type={"submit"}
                      fullWidth
                      variant={"contained"}
                      color={"primary"}
                    >
-                       Entrar
-                   </Button>
+                       { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Entrar</> }
+                   </StyledButton>
                </form>
             </InputsContainer>
             <SignUpButtonContainer>
