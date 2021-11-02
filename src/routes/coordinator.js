@@ -13,11 +13,17 @@ export const goToSingUp = (history) => {
     history.push("/cadastro")
 }
 export const goToAdress = (history) => {
-    history.push("/enredeco")
+    history.push("/endereco")
 }
-export const goToProfile = (history, id) => {
-    history.push(`/perfil/${id}`)
+export const goToProfile = (history) => {
+    history.push(`/perfil`)
 }
+export const goToEditeProfile = (history) =>{
+    history.push(`/perfil/editar/`)
+} 
+export const goToEditAdress = (history) =>{
+    history.push(`/perfil/editar-endereco`)
+} 
 export const goToRestaurant = (history, id) => {
     history.push(`/restaurante/${id}`)
 }

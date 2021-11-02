@@ -9,6 +9,8 @@ import RestaurantPage from "../pages/RestaurantPage/RestaurantPage"
 import CartPage from "../pages/CartPage/CartPage"
 import InitialPage from "../pages/InitialPage/InitialPage"
 import ErrorPage from "../pages/ErrorPage/ErrorPage"
+import EditeProfilePage from "../pages/EditProfilePage/EditProfilePage"
+import EditAddressPage from "../pages/EditProfilePage/EditAddressPage"
 
 const RouterPage = () => {
     return (
@@ -19,7 +21,9 @@ const RouterPage = () => {
                 <Route exact path="/login" component={() => <LoginPage />} />
                 <Route exact path="/cadastro" component={() => <SingUpPage />} />
                 <Route exact path="/endereco" component={() => <AdressPage />} />
-                <Route exact path="/perfil/:id" component={() => <ProfilePage />} />
+                <Route exact path="/perfil/" component={() => <ProfilePage />} />
+                <Route exact path='/perfil/editar/' component={() => <EditeProfilePage/>}/>
+                <Route exact path='/perfil/editar-endereco' component={() => <EditAddressPage/>}/>
                 <Route exact path="/restaurante/:id" component={() => <RestaurantPage />} />
                 <Route exact path="/carrinho" component={() => <CartPage />} />
                 <Route path="*" component={() => <ErrorPage />} />

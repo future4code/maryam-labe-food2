@@ -1,6 +1,6 @@
 import React from "react"
 import useForm from "../../hooks/useForm"
-import {ScreenContainer, LogoImage, InputsContainer, SignUpButtonContainer, Text} from "./style"
+import {ScreenContainer, LogoImage, InputsContainer, SignUpButtonContainer} from "./style"
 import logo from "../../assets/logo-future-eats-invert.png"
 import { Button, TextField, Typography } from "@material-ui/core"
 import {goToHome, goToSingUp} from "../../routes/coordinator"
