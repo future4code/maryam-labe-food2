@@ -6,20 +6,20 @@ import shoppingCartGreen from '../../assets/shoppingCartGreen.png'
 import shoppingCartWhite from '../../assets/shoppingCartWhite.png'
 import React from 'react'
 import { useHistory } from 'react-router'
-import { goToProfile, goToCart, goToRestaurant } from '../../routes/coordinator'
-import {Container, ContainerFooter} from './style'
+import { goToHome, goToProfile, goToCart } from '../../routes/coordinator'
+import { Container, ContainerFooter } from './style'
 import ActiveOrder from '../ActiveOrder/ActiveOrder'
 
 const Footer = () => {
     const history = useHistory()
 
-    return(
+    return (
         <Container>
-            {history.location.pathname === "/restaurante" && <ActiveOrder/>}
+            {history.location.pathname === "/restaurante" && <ActiveOrder />}
             <ContainerFooter>
-                <img src={history.location.pathname === "/restaurante"? homepageGreen: homepageWhite} alt={"Icone Página Inicial"} onClick={() =>goToRestaurant(history)}/>
-                <img src={history.location.pathname === "/carrinho" ? shoppingCartGreen: shoppingCartWhite} alt={"Icone Carrinho"} onClick={ () => goToCart(history)}/>
-                <img src={history.location.pathname === "/perfil" ? avatarGreen : avatarWhite} alt={"Icone Perfil"} onClick={() => goToProfile(history)}/>
+                <img src={history.location.pathname === "/restaurante" ? homepageGreen : homepageWhite} alt={"Icone Página Inicial"} onClick={() => goToHome(history)} />
+                <img src={history.location.pathname === "/carrinho" ? shoppingCartGreen : shoppingCartWhite} alt={"Icone Carrinho"} onClick={() => goToCart(history)} />
+                <img src={history.location.pathname === "/perfil" ? avatarGreen : avatarWhite} alt={"Icone Perfil"} onClick={() => goToProfile(history)} />
             </ContainerFooter>
         </Container>
     )

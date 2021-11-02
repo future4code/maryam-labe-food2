@@ -13,7 +13,7 @@ export const putAddAdress = ( body, cleanFields, history, setIsLoading) => {
     axios(config)
         .then((res) => {
             localStorage.setItem('token',res.data.token)
-            window.alert("Seu enderço foi salvo!")
+            window.alert("Seu endereço foi salvo!")
             cleanFields()
             setIsLoading(false)
             goToProfile(history)
