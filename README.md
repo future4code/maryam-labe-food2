@@ -1,10 +1,15 @@
-.<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO -->
 <div align="center">
 <img src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" </img>
 </div>
 
 <!-- PROJECT TITLE -->
 <h1 align='center'id="top"> :rocket: == Projeto Final de Front-End == :rocket: </h1>
+
+<!-- LICENSE -->
+<p align="center">
+  <a href="https://choosealicense.com/licenses/mit/" target="_blank"><img src="https://img.shields.io/static/v1?label=License&message=MIT&color=informational"></a>
+ </p>
 
 <!-- PROJECT MENU -->
 <p align="center">
