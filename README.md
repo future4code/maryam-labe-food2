@@ -28,45 +28,45 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 # Telas do projeto - mobile:
 (em breve)
 
-## Nome dos integrantes: 
+## 🚀 Integrantes: 
 <table>
   <tr>
     <td align="center"><a href="https://github.com/ArgLD">
-    <img src="https://avatars.githubusercontent.com/u/78452566?v=4" width="100px" alt="Imagem do perfil de Argleydson Leão"/>
-    <br />
-    <sub><b>Argleydson Leão</b></sub>
-</table>
+      <img src="https://avatars.githubusercontent.com/u/78452566?v=4" width="100px" alt="Imagem do perfil de Argleydson Leão"/>
+      <br />
+      <sub><b>Argleydson Leão</b></sub>
+      <br />
+    </td>
 
-<table>
-  <tr>
     <td align="center"><a href="https://github.com/mhsouza88">
-    <img src="https://avatars.githubusercontent.com/u/88038506?v=4" width="100px" alt="Imagem do perfil de Maria Helena V. C. de Souza"/>
-    <br />
-    <sub><b>Maria Helena V. C. de Souza</b></sub>
-</table>
+      <img src="https://avatars.githubusercontent.com/u/88038506?v=4" width="100px" alt="Imagem do perfil de Maria Helena V. C. de Souza"/>
+      <br />
+      <sub><b>Maria Helena V. C. de Souza</b></sub>
+      <br />
+    </td>
 
-<table>
-  <tr>
+  
     <td align="center"><a href="https://github.com/silviordjr">
-    <img src="https://avatars.githubusercontent.com/u/42523195?v=4" width="100px" alt="Imagem do perfil de Silvio Ribeiro Dias Jr."/>
-    <br />
-    <sub><b>Silvio Ribeiro Dias Jr.</b></sub>
-</table>
+      <img src="https://avatars.githubusercontent.com/u/42523195?v=4" width="100px" alt="Imagem do perfil de Silvio Ribeiro Dias Jr."/>
+      <br />
+      <sub><b>Silvio Ribeiro Dias Jr.</b></sub>
+      <br />
+    </td>
 
-<table>
-  <tr>
+  
     <td align="center"><a href="https://github.com/TainaSoares">
-    <img src="https://avatars.githubusercontent.com/u/88054888?v=4" width="100px" alt="Imagem do perfil de Tainá Soares"/>
-    <br />
-    <sub><b>Tainá Soares</b></sub>
-</table>
+      <img src="https://avatars.githubusercontent.com/u/88054888?v=4" width="100px" alt="Imagem do perfil de Tainá Soares"/>
+      <br />
+      <sub><b>Tainá Soares</b></sub>
+      <br />
+    </td>
 
-<table>
-  <tr>
     <td align="center"><a href="https://github.com/dev-magdielSilva">
-    <img src="https://avatars.githubusercontent.com/u/88065117?v=4" width="100px" alt="Imagem do perfil de Tainá Soares"/>
-    <br />
-    <sub><b>Magdiel Silva</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/88065117?v=4" width="100px" alt="Imagem do perfil de Tainá Soares"/>
+      <br />
+      <sub><b>Magdiel Silva</b></sub>
+      <br />
+    </td>  
 </table>
 
 
