@@ -7,8 +7,6 @@
 # <h1 align='center'>Projeto Final de Front-End</h1>
 
 <!-- PROJECT -->
-## FutureEats 🍽️
-
 ## Sobre o projeto
 <p align="justify"> Projeto final de Frontend feito pelos alunos do curso Fullstack Web (integral) da Labenu. Turma Maryam, grupo 2.</p>
 
