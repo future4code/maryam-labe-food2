@@ -14,12 +14,13 @@
 <!-- PROJECT MENU -->
 <p align="center">
   <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
-  <a href="#site">Link do site</a> &#xa0; | &#xa0; 
+  <a href="#site">Site</a> &#xa0; | &#xa0; 
   <a href="#tecnologias">Tecnologias</a> &#xa0; | &#xa0;
   <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;  
   <a href="#pendente">Pendências</a> &#xa0; | &#xa0;
-  <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#imagens">Imagens</a> &#xa0; | &#xa0;  
+  <a href="#wireframe"> Wireframe</a> &#xa0; | &#xa0;
+  <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;   
   <a href="#desenvolvedores">Desenvolvedores</a>
 </p>
 
@@ -143,10 +144,7 @@ $ npm run start
 ```
 
 <!-- PROJECT DEVELOPERS-->
-<h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2> 
-
-<p> :busts_in_silhouette: Aguardamos o seu contato. </p>
-  
+<h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2>   
   
 <table>
   <tr>
@@ -181,6 +179,8 @@ $ npm run start
       <br />
     </td>  
 </table>
+  
+  <p> :busts_in_silhouette: Aguardamos o seu contato. </p>
   
 <a href="#top">Voltar para o topo</a>
 
