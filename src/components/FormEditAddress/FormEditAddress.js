@@ -7,8 +7,8 @@ import { putAddAdress } from '../../services/putServices'
 
 const FormEditAddress = ({ address }) => {
     const history = useHistory()
-
-    const { form, onChange, clear } = useForm({
+    //useForm -> observar a ordem, não importa o nome. form, onChange, clear
+    const [form, handleInputChange, clear] = useForm({
         street: address.address && address.address.street,
         number: address.address && address.address.number,
         neighbourhood: address.address && address.address.neighbourhood,
@@ -16,77 +16,79 @@ const FormEditAddress = ({ address }) => {
         state: address.address && address.address.state,
         complement: address.address && address.address.complement
     })
-
+    
     const onSubmitFormAdress = (event) => {
         event.preventDefault()
         putAddAdress(form, history, clear)
     }
 
     return (
+
         <div>
-            <form onSubmit={onSubmitFormAdress}>
-                <TextField id="outlined-basic" label="Logradouro" variant="outlined"
-                    required
-                    value={form.street}
-                    name={'street'}
-                    onChange={onChange}
-                    placeholder='Rua / Av.'
-                    margin={'normal'}
-                    fullWidth
-                />
-                <TextField id="outlined-basic" label="Número" variant="outlined"
-                    required
-                    value={form.number}
-                    name={'number'}
-                    onChange={onChange}
-                    placeholder='Número'
-                    margin={'normal'}
-                    fullWidth
-                />
-                <TextField id="outlined-basic" label="Complemento" variant="outlined"
-                    required
-                    value={form.complement}
-                    name={'complement'}
-                    onChange={onChange}
-                    placeholder='Apto. /Bloco'
-                    margin={'normal'}
-                    fullWidth
-                />
-                <TextField id="outlined-basic" label="Bairro" variant="outlined"
-                    required
-                    value={form.neighbourhood}
-                    name={'neighbourhood'}
-                    onChange={onChange}
-                    placeholder='Bairro'
-                    margin={'normal'}
-                    fullWidth
-                />
-                <TextField id="outlined-basic" label="Cidade" variant="outlined"
-                    required
-                    value={form.city}
-                    name={'city'}
-                    onChange={onChange}
-                    placeholder='Cidade'
-                    margin={'normal'}
-                    fullWidth
-                />
-                <TextField id="outlined-basic" label="Estado" variant="outlined"
-                    required
-                    value={form.state}
-                    name={'state'}
-                    onChange={onChange}
-                    placeholder='Estado'
-                    margin={'normal'}
-                    fullWidth
-                />
-                <Button variant="contained" color="primary"
-                    type={'submit'}
-                    fullWidth
-                    margin={'normal'}
-                >
-                    Salvar
-                </Button>
-            </form>
+            {address.address && (
+                <form onSubmit={onSubmitFormAdress}>
+                    <TextField id="outlined-basic" label="Logradouro" variant="outlined"
+                        required
+                        value={form.street}
+                        name={'street'}
+                        onChange={handleInputChange}
+                        placeholder='Rua / Av.'
+                        margin={'normal'}
+                        fullWidth
+                    />
+                    <TextField id="outlined-basic" label="Número" variant="outlined"
+                        required
+                        value={form.number}
+                        name={'number'}
+                        onChange={handleInputChange}
+                        placeholder='Número'
+                        margin={'normal'}
+                        fullWidth
+                    />
+                    <TextField id="outlined-basic" label="Complemento" variant="outlined"
+                        required
+                        value={form.complement}
+                        name={'complement'}
+                        onChange={handleInputChange}
+                        placeholder='Apto. /Bloco'
+                        margin={'normal'}
+                        fullWidth
+                    />
+                    <TextField id="outlined-basic" label="Bairro" variant="outlined"
+                        required
+                        value={form.neighbourhood}
+                        name={'neighbourhood'}
+                        onChange={handleInputChange}
+                        placeholder='Bairro'
+                        margin={'normal'}
+                        fullWidth
+                    />
+                    <TextField id="outlined-basic" label="Cidade" variant="outlined"
+                        required
+                        value={form.city}
+                        name={'city'}
+                        onChange={handleInputChange}
+                        placeholder='Cidade'
+                        margin={'normal'}
+                        fullWidth
+                    />
+                    <TextField id="outlined-basic" label="Estado" variant="outlined"
+                        required
+                        value={form.state}
+                        name={'state'}
+                        onChange={handleInputChange}
+                        placeholder='Estado'
+                        margin={'normal'}
+                        fullWidth
+                    />
+                    <Button variant="contained" color="primary"
+                        type={'submit'}
+                        fullWidth
+                        margin={'normal'}
+                    >
+                        Salvar
+                    </Button>
+                </form>)}
         </div>
     )
 }
