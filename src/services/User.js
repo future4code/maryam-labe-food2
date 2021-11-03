@@ -1,6 +1,6 @@
 import { BASE_URL } from '../constants/urls'
 import axios from 'axios'
-import { goToHome } from '../routes/coordinator'
+import { goToAdress } from '../routes/coordinator'
 
 export const signUp = (body, clear, history, setIsLoading) => {
     setIsLoading(true)
@@ -11,7 +11,7 @@ export const signUp = (body, clear, history, setIsLoading) => {
             window.alert("Cadastro efetuado com sucesso!")
             clear()
             setIsLoading(false)
-            goToHome(history)
+            goToAdress(history)
         })
         .catch((err) => {
             setIsLoading(false)

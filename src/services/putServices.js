@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { BASE_URL } from '../constants/urls'
-import { goToProfile } from '../routes/coordinator'
+import { goToHome } from '../routes/coordinator'
 
 export const putAddAdress = ( body, cleanFields, history, setIsLoading) => {
     const config = {
@@ -16,7 +16,7 @@ export const putAddAdress = ( body, cleanFields, history, setIsLoading) => {
             window.alert("Seu endereço foi salvo!")
             cleanFields()
             setIsLoading(false)
-            goToProfile(history)
+            goToHome(history)
         })
         .catch((err) => {
             setIsLoading(false)
