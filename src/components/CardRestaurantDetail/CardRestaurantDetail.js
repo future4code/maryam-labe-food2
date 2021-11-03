@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { goToCart } from "../../routes/coordinator";
+import { Button } from "@material-ui/core";
 import SimpleModalWrapped from "./CardModal"
 import { useHistory } from "react-router-dom";
 import {
@@ -9,9 +9,9 @@ import {
   CardDetailDescription,
   CardDetailPrice,
   ContainerCard,
+  RectangleButton,
+  CardDetail2
 } from "./styled";
-
-
 
 const CardRestaurantDetail = (props) => {
   const [open, setOpen] = useState(false);
@@ -26,20 +26,29 @@ const CardRestaurantDetail = (props) => {
     <div>
       <div>
         <CardDetail>
-          {/* <p > {props.detail.category} </p> */}
           <CardDetailImage src={props.detail.photoUrl} />
+
+          <CardDetail2>
           <ContainerCard>
             <CardDetailTextName> {props.detail.name} </CardDetailTextName>
             <CardDetailDescription>
               {" "}
               {props.detail.description}{" "}
             </CardDetailDescription>
+            </ContainerCard>
+
+
+            <ContainerCard>
+            <RectangleButton>
             <CardDetailPrice>R$ {props.detail.price} </CardDetailPrice>
+            <Button size="small" onClick={AddToCart}>Adicionar</Button>
+            </RectangleButton>
           </ContainerCard>
-          <button onClick={AddToCart}>Adicionar ao carrinho</button>
+          </CardDetail2>
+
         </CardDetail>
       </div>
-      {open === true && <SimpleModalWrapped/>}
+      {open === true && <SimpleModalWrapped open={open} setOpen={setOpen}/>}
     </div>
   );
 };
