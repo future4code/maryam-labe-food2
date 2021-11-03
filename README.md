@@ -23,7 +23,7 @@
 <p align="justify">Projeto final de Frontend feito pelos alunos do curso Fullstack Web (integral) da Labenu. Turma Maryam, grupo 2.</p>
 
 <!-- PROJECT SITE -->
-<h2 id="site">:rocket: Link do site </h2>
+<h2 id="site">:earth_americas: Link do site </h2>
 (link do Surge - em breve)
 
 <!-- PROJECT TECHNOLOGIES -->
@@ -76,7 +76,7 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 - [x] Versão Desktop
 
 <!-- PROJECT IMG-->
-<h2 id="imagens">:phone: Imagens Mobile</h2>
+<h2 id="imagens">:iphone: Imagens Mobile</h2>
 (em breve)
 - **Página inicial**
 <img alt="login" src="" width="314"/>
