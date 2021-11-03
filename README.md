@@ -31,8 +31,8 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 ### Telas
 - [x] Tela inicial;
 - [x] Login;
-- [] Cadastro de endereço;
-- [] Sign up;
+- [x] Cadastro de endereço;
+- [x] Sign up;
 - [] Home page;
 - [] Pesquisa;
 - [] Carrinho;
@@ -44,8 +44,8 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 
 ### Integração com API
 - [x] Login;
-- [] Signup;
-- [] Add Address;
+- [x] Signup;
+- [x] Add Address;
 - [] Get Full Address;
 - [] Get Profile;
 - [] Update Profile;
