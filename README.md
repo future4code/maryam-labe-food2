@@ -20,7 +20,7 @@
 
 <!-- PROJECT SOBRE -->
 <h2 id="sobre">:notebook: Sobre </h2>
-<p align="justify"> :rocket: Projeto final de Frontend feito pelos alunos do curso Fullstack Web (integral) da Labenu. Turma Maryam, grupo 2.</p>
+<p align="justify">Projeto final de Frontend feito pelos alunos do curso Fullstack Web (integral) da Labenu. Turma Maryam, grupo 2.</p>
 
 <!-- PROJECT SITE -->
 <h2 id="site">:rocket: Link do site </h2>
@@ -76,7 +76,7 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 - [x] Versão Desktop
 
 <!-- PROJECT IMG-->
-<h2 id="imagens">:mobile: Imagens Mobile</h2>
+<h2 id="imagens">:phone: Imagens Mobile</h2>
 (em breve)
 - **Página inicial**
 <img alt="login" src="" width="314"/>
