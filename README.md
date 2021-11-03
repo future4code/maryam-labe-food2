@@ -119,6 +119,11 @@ $ cd ./maryam-labe-food2
 
 # Instale as dependências
 $ npm install
+$ npm install axios
+$ npm install react-router-dom
+$ npm install styled-components
+$ npm install @material-ui/core
+$ npm install @material-ui/icons
 
 # Para iniciar o projeto
 $ npm run start
