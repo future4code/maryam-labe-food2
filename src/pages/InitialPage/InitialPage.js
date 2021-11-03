@@ -1,7 +1,7 @@
 import React from "react"
 import { useHistory } from 'react-router'
 import { goToLogin } from '../../routes/coordinator'
-import { Container } from './style'
+import { Container, PulseButton } from './style'
 
 const InitialPage = () => {
     const history = useHistory()
@@ -11,7 +11,9 @@ const InitialPage = () => {
     },3000)
 
     return (
-        <Container/>
+            <Container>
+                <PulseButton />
+            </Container> 
     )
 }
 
