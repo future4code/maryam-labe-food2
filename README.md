@@ -1,7 +1,6 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-<img src="![logo-future-eats-white@3x](https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png)
-"  width="200px" </img>
+<img src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" </img>
 </div>
 
 <!-- PROJECT TITLE -->
