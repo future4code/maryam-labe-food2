@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <div align="center">
-<img src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" </img>
+<img alt= "Logo" src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" />
 </div>
 
 <!-- PROJECT TITLE -->
@@ -106,6 +106,12 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 - **Página Perfil com histórico de Pedidos e edição de Cadastro**
 <img alt="perfil" src="" width="314"/>
 
+<!-- PROJECT WIREFRAME  -->
+<h2 id="wireframe">:jigsaw: Wireframe</h2>
+  <div align="center">
+    <img alt="Wireframe" src="" />
+  </div>
+
 <!-- PROJECT REQUIREMENTS-->
 <h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
 
@@ -139,6 +145,9 @@ $ npm run start
 <!-- PROJECT DEVELOPERS-->
 <h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2> 
 
+<p> :busts_in_silhouette: Aguardamos o seu contato. </p>
+  
+  
 <table>
   <tr>
     <td align="center"><a href="https://github.com/ArgLD">
@@ -172,6 +181,6 @@ $ npm run start
       <br />
     </td>  
 </table>
-
+  
 <a href="#top">Voltar para o topo</a>
 
