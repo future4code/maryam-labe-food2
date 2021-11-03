@@ -15,8 +15,8 @@
 ## 🛠 Recursos utilizados
 Abaixo segue o que foi utilizado na criação deste projeto:
 
-<a>🔗 [ReactJS](https://pt-br.reactjs.org/) -O ReactJS é uma biblioteca JavaScript declarativa, eficiente e flexível para criar interfaces com o usuário. Ele permite compor UIs complexas a partir de pequenos e isolados códigos chamados “componentes”.; </a>
-<a>🔗 [Styled-Components](https://styled-components.com/) - Styled-components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação. Eles são escritos em uma mistura de JavaScript com CSS.</a>
+<p>🔗 [ReactJS](https://pt-br.reactjs.org/) -O ReactJS é uma biblioteca JavaScript declarativa, eficiente e flexível para criar interfaces com o usuário. Ele permite compor UIs complexas a partir de pequenos e isolados códigos chamados “componentes”.; </p>
+<p>🔗 [Styled-Components](https://styled-components.com/) - Styled-components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação. Eles são escritos em uma mistura de JavaScript com CSS.</p>
 <a>🔗 [Material-UI](https://mui.com/pt/) - O Material-UI fornece um componente opcional CssBaseline. Ele corrige algumas inconsistências nos navegadores e dispositivos, ao mesmo tempo em que fornece redefinições ligeiramente mais opinativas para elementos HTML comuns.</a>
 <a>🔗 [React Axios](https://www.npmjs.com/package/axios) - Axios é um cliente HTTP baseado em Promises para fazer requisições. Pode ser utilizado tanto no navegador quanto no Node. js ou qualquer serviço de API.</a>
 <a>🔗 [React-router-dom](https://reactrouter.com/web/guides/quick-start) - O React Router é uma lib completa para controle de rotas que permite que você consiga configurar as rotas utilizando o formato JSX e também disponibiliza uma API para você configurar diretamente via Javascript.</a>
