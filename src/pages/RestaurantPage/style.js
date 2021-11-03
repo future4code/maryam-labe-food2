@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
+  margin: 64px 0 80px 0;
 `;
-
 export const ContainerRestaurant = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@ export const ContainerRestaurant = styled.div`
   width: 360px;
   height: 834px;
   border: 1px solid black;
+
 `;
 export const ImageRestaurante = styled.img`
   width: 328px;
@@ -49,3 +50,87 @@ export const TitleRestaurante = styled.div`
   width: 84px;
   height: 19px;
 `;
+const MainCard = styled.div`
+  width: 20.5rem;
+  height: 11.75rem;
+  padding: 0 0 1rem;
+  border-radius: 8px;
+  border: solid 1px #b8b8b8;
+`;
+
+export const ImgCard = styled.img`
+  margin: 17px 16px 12px;
+  width: 328px;
+  height: 120px;
+  border-radius: 8px;
+
+`;
+
+export const RestaurantName = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 12px 16px 8px;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: "normal";
+  font-stretch: "normal";
+  font-style: "normal";
+  line-height: "normal";
+  letter-spacing: -0.39px;
+  color: #5cb646;
+`;
+export const CategoryRestaurant = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 8px 8px 8px ;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: "normal";
+  font-stretch: "normal";
+  font-style: "normal";
+  line-height: "normal";
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`
+
+export const DeliveryTime = styled.span`
+  width: 328px;
+  height: 18px;
+  margin: 8px 8px 8px ;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: "normal";
+  font-stretch: "normal";
+  font-style: "normal";
+  line-height: "normal";
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`;
+
+export const RestaurantShipping = styled.span`
+  width: 328px;
+  height: 18px;
+  margin: 8px 8px 8px ;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: "normal";
+  font-stretch: "normal";
+  font-style: "normal";
+  line-height: "normal";
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+
+`
+export const RestaurantAddress = styled.span`
+  width: 328px;
+  height: 18px;
+  margin: 8px 8px 8px ;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: "normal";
+  font-stretch: "normal";
+  font-style: "normal";
+  line-height: "normal";
+  letter-spacing: -0.39px;
+  color: #b8b8b8;
+`
