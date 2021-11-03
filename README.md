@@ -15,14 +15,14 @@
 ## 🛠 Recursos utilizados
 Abaixo segue o que foi utilizado na criação deste projeto:
 
-🔗 [ReactJS](https://pt-br.reactjs.org/) -O ReactJS é uma biblioteca JavaScript declarativa, eficiente e flexível para criar interfaces com o usuário. Ele permite compor UIs complexas a partir de pequenos e isolados códigos chamados “componentes”.;
-🔗 [Styled-Components](https://styled-components.com/) - Styled-components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação. Eles são escritos em uma mistura de JavaScript com CSS.
-🔗 [Material-UI](https://mui.com/pt/) - O Material-UI fornece um componente opcional CssBaseline. Ele corrige algumas inconsistências nos navegadores e dispositivos, ao mesmo tempo em que fornece redefinições ligeiramente mais opinativas para elementos HTML comuns.
-🔗 [React Axios](https://www.npmjs.com/package/axios) - Axios é um cliente HTTP baseado em Promises para fazer requisições. Pode ser utilizado tanto no navegador quanto no Node. js ou qualquer serviço de API.
-🔗 [React-router-dom](https://reactrouter.com/web/guides/quick-start) - O React Router é uma lib completa para controle de rotas que permite que você consiga configurar as rotas utilizando o formato JSX e também disponibiliza uma API para você configurar diretamente via Javascript.
-🔗 [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html) - Eles permitem que você use o state e outros recursos do React sem escrever uma classe.
-🔗 [API](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces) - API é um conjunto de definições e protocolos usado no desenvolvimento e na integração de software de aplicações. API é um acrônimo em inglês que significa interface de programação de aplicações.
-🔗 [Metodologias Ágeis - Scrum](https://www.atlassian.com/br/agile/scrum) - Scrum é um framework leve que ajuda pessoas, times e organizações a gerar valor através de soluções adaptativas para problemas complexos.
+<a>🔗 [ReactJS](https://pt-br.reactjs.org/) -O ReactJS é uma biblioteca JavaScript declarativa, eficiente e flexível para criar interfaces com o usuário. Ele permite compor UIs complexas a partir de pequenos e isolados códigos chamados “componentes”.; </a>
+<a>🔗 [Styled-Components](https://styled-components.com/) - Styled-components é uma biblioteca para React e React Native que permite que você use estilos ao nível de componente na sua aplicação. Eles são escritos em uma mistura de JavaScript com CSS.</a>
+<a>🔗 [Material-UI](https://mui.com/pt/) - O Material-UI fornece um componente opcional CssBaseline. Ele corrige algumas inconsistências nos navegadores e dispositivos, ao mesmo tempo em que fornece redefinições ligeiramente mais opinativas para elementos HTML comuns.</a>
+<a>🔗 [React Axios](https://www.npmjs.com/package/axios) - Axios é um cliente HTTP baseado em Promises para fazer requisições. Pode ser utilizado tanto no navegador quanto no Node. js ou qualquer serviço de API.</a>
+<a>🔗 [React-router-dom](https://reactrouter.com/web/guides/quick-start) - O React Router é uma lib completa para controle de rotas que permite que você consiga configurar as rotas utilizando o formato JSX e também disponibiliza uma API para você configurar diretamente via Javascript.</a>
+<a>🔗 [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html) - Eles permitem que você use o state e outros recursos do React sem escrever uma classe.
+<a>🔗 [API](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces) - API é um conjunto de definições e protocolos usado no desenvolvimento e na integração de software de aplicações. API é um acrônimo em inglês que significa interface de programação de aplicações.</a>
+<a>🔗 [Metodologias Ágeis - Scrum](https://www.atlassian.com/br/agile/scrum) - Scrum é um framework leve que ajuda pessoas, times e organizações a gerar valor através de soluções adaptativas para problemas complexos.</a>
 
 
 ## Link do site:
