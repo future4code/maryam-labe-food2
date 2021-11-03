@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const Caixinha = styled.div`
-  width: 200px;
-  height: 200px;
-  background-color: white;
-`
+
+
 export const ContainerCard = styled.div`
   display: flex;
+  height: 60px;
   flex-direction: column;
+  justify-content: space-between;
 `
 export const CardDetail = styled.div`
   display: flex;
@@ -18,7 +17,11 @@ export const CardDetail = styled.div`
   border-radius: 8px;
   border: solid 1px #b8b8b8;
 `;
-
+export const CardDetail2 = styled.div`
+display: block;
+flex-direction: row;
+justify-content: space-between;
+`
 export const CardDetailImage = styled.img`
   width: 96px;
   height: 112px;
@@ -64,3 +67,12 @@ export const CardDetailPrice = styled.span`
   letter-spacing: -0.39px;
   color: var(--black);
 `
+export const RectangleButton = styled.div`
+  width: 90px;
+  height: 31px;
+  margin: 7px 0 0 80px;
+  padding: 8px 20.5px 9px 21.5px;
+  border-radius: 8px;
+  border: solid 1px #5cb646;
+`
+
