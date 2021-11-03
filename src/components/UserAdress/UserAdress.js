@@ -1,6 +1,6 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-// import useProtectedPage from '../../hooks/useProtectedPage'
+import useProtectedPage from '../../hooks/useProtectedPage'
 import { goToEditAdress } from '../../routes/coordinator'
 import editPen from '../../assets/editPen.png'
 import { ContainerAdress } from './style'
@@ -9,7 +9,7 @@ import useRequestData from '../../hooks/useRequestData'
 
 const UserAdress = () => {
     const history = useHistory()
-    // useProtectedPage()
+    useProtectedPage()
 
     const address = useRequestData({}, `/profile/address`)
 

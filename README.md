@@ -1,16 +1,34 @@
-<!-- PROJECT LOGO -->
+.<!-- PROJECT LOGO -->
 <div align="center">
 <img src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" </img>
 </div>
 
 <!-- PROJECT TITLE -->
-# <h1 align='center'>Projeto Final de Front-End</h1>
+# <h1 align='center'id="top"> :rocket: == Projeto Final de Front-End == :rocket: </h1>
 
-<!-- PROJECT -->
-## Sobre o projeto
-<p align="justify"> Projeto final de Frontend feito pelos alunos do curso Fullstack Web (integral) da Labenu. Turma Maryam, grupo 2.</p>
+<!-- PROJECT MENU -->
+<p align="center">
+  <a href="#sobre">Sobre</a> &#xa0; | &#xa0; 
+  <a href="#site">Link do site</a> &#xa0; | &#xa0; 
+  <a href="#tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#funciona">O que funciona</a> &#xa0; | &#xa0;  
+  <a href="#pendente">Pendências</a> &#xa0; | &#xa0;
+  <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#imagens">Imagens</a> &#xa0; | &#xa0;  
+  <a href="#desenvolvedores">Desenvolvedores</a>
+</p>
 
-## 🛠 Recursos utilizados
+<!-- PROJECT SOBRE -->
+<h2 id="sobre">:notebook: Sobre </h2>
+<p align="justify"> :rocket: Projeto final de Frontend feito pelos alunos do curso Fullstack Web (integral) da Labenu. Turma Maryam, grupo 2.</p>
+
+<!-- PROJECT SITE -->
+<h2 id="site">:rocket: Link do site </h2>
+(link do Surge - em breve)
+
+<!-- PROJECT TECHNOLOGIES -->
+<h2 id="tecnologias"> 🛠 Tecnologias </h2>
+
 Abaixo segue o que foi utilizado na criação deste projeto:
 
 <p>🔗 [ReactJS](https://pt-br.reactjs.org/) -O ReactJS é uma biblioteca JavaScript declarativa, eficiente e flexível para criar interfaces com o usuário. Ele permite compor UIs complexas a partir de pequenos e isolados códigos chamados “componentes”. </p>
@@ -22,11 +40,8 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 <p>🔗 [API](https://www.redhat.com/pt-br/topics/api/what-are-application-programming-interfaces) - API é um conjunto de definições e protocolos usado no desenvolvimento e na integração de software de aplicações. API é um acrônimo em inglês que significa interface de programação de aplicações.</p>
 <p>🔗 [Metodologias Ágeis - Scrum](https://www.atlassian.com/br/agile/scrum) - Scrum é um framework leve que ajuda pessoas, times e organizações a gerar valor através de soluções adaptativas para problemas complexos.</p>
 
-
-## Link do site:
-(link do Surge - em breve)
-
-## O que funciona:
+<!-- PROJECT IT WORKS-->
+<h2 id="funciona">:heavy_check_mark: O que funciona</h2>
 
 ### Telas
 - [x] Tela inicial;
@@ -55,45 +70,98 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 - [] Get Active Order;
 - [] Orders History.
 
-## O que não funciona:
+<!-- PROJECT PENDING-->
+<h2 id="pendente">:construction: Em desenvolvimento</h2>
 
+- [x] Versão Desktop
 
-## Telas do projeto - mobile:
+<!-- PROJECT IMG-->
+<h2 id="imagens">:mobile: Imagens Mobile</h2>
 (em breve)
+- **Página inicial**
+<img alt="login" src="" width="314"/>
 
-## 🚀 Integrantes: 
+- **Página Restaurantes**
+<img alt="restaurantes" src="" width="314"/>
+
+- **Página Busca por Restaurantes**
+<img alt="restaurantes" src="" width="314"/>
+
+- **Página Cardápio do Restaurante**
+<img alt="cardapio" src="" width="314"/>
+
+- **Página Adicionando Item do Cardápio**
+<img alt="adicionando item" src="" width="314"/>
+
+- **Página Carrinho confirmando Pedido**
+<img alt="confirmando pedido" src="" width="314"/>
+<img alt="confirmando pedido" src="" width="314"/>
+<img alt="pedido confirmado" src="" width="314"/>
+
+- **Página Perfil com histórico de Pedidos e edição de Cadastro**
+<img alt="perfil" src="" width="314"/>
+
+<!-- PROJECT REQUIREMENTS-->
+<h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+<h4>:checkered_flag: Rodando o projeto </h4>
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/future4code/maryam-labe-food2>
+
+# Acesse a pasta do projeto no terminal
+$ cd ./maryam-labe-food2
+
+# Instale as dependências
+$ npm install
+
+# Para iniciar o projeto
+$ npm run start
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
+
+<!-- PROJECT DEVELOPERS-->
+<h2 id="desenvolvedores">:construction_worker: Desenvolvedores</h2> 
+
 <table>
   <tr>
     <td align="center"><a href="https://github.com/ArgLD">
-      <img src="https://avatars.githubusercontent.com/u/78452566?v=4" width="100px" alt="Imagem do perfil de Argleydson Leão"/>
+      <img src="https://avatars.githubusercontent.com/u/78452566?v=4" style="border-radius: 50%" width="100px" alt="Imagem do perfil de Argleydson Leão"/>
       <br />
       <sub><b>Argleydson Leão</b></sub>
       <br />
     </td>
     <td align="center"><a href="https://github.com/mhsouza88">
-      <img src="https://avatars.githubusercontent.com/u/88038506?v=4" width="100px" alt="Imagem do perfil de Maria Helena V. C. de Souza"/>
+      <img src="https://avatars.githubusercontent.com/u/88038506?v=4" style="border-radius: 50%" width="100px" alt="Imagem do perfil de Maria Helena V. C. de Souza"/>
       <br />
       <sub><b>Maria Helena V. C. de Souza</b></sub>
       <br />
     </td>  
     <td align="center"><a href="https://github.com/silviordjr">
-      <img src="https://avatars.githubusercontent.com/u/42523195?v=4" width="100px" alt="Imagem do perfil de Silvio Ribeiro Dias Jr."/>
+      <img src="https://avatars.githubusercontent.com/u/42523195?v=4" style="border-radius: 50%" width="100px" alt="Imagem do perfil de Silvio Ribeiro Dias Jr."/>
       <br />
       <sub><b>Silvio Ribeiro Dias Jr.</b></sub>
       <br />
     </td>  
     <td align="center"><a href="https://github.com/TainaSoares">
-      <img src="https://avatars.githubusercontent.com/u/88054888?v=4" width="100px" alt="Imagem do perfil de Tainá Soares"/>
+      <img src="https://avatars.githubusercontent.com/u/88054888?v=4" style="border-radius: 50%" width="100px" alt="Imagem do perfil de Tainá Soares"/>
       <br />
       <sub><b>Tainá Soares</b></sub>
       <br />
     </td>
     <td align="center"><a href="https://github.com/dev-magdielSilva">
-      <img src="https://avatars.githubusercontent.com/u/88065117?v=4" width="100px" alt="Imagem do perfil de Tainá Soares"/>
+      <img src="https://avatars.githubusercontent.com/u/88065117?v=4" style="border-radius: 50%" width="100px" alt="Imagem do perfil de Tainá Soares"/>
       <br />
       <sub><b>Magdiel Silva</b></sub>
       <br />
     </td>  
 </table>
 
+<a href="#top">Voltar para o topo</a>
 

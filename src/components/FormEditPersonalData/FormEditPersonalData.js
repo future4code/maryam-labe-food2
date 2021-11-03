@@ -5,9 +5,8 @@ import useForm from '../../hooks/useForm'
 import { putUpdateProfile } from '../../services/putServices'
 
 const FormEditPersonalData = ({ dataProfile }) => {
-
-
-    const { input, onChangeInput, cleanFields } = useForm({
+    //useForm -> observar a ordem, não importa o nome. form, onChange, clear
+    const [form, handleInputChange, clear] = useForm({
         name: dataProfile.user && dataProfile.user.name,
         email: dataProfile.user && dataProfile.user.email,
         cpf: dataProfile.user && dataProfile.user.cpf,
@@ -15,7 +14,7 @@ const FormEditPersonalData = ({ dataProfile }) => {
 
     const onSubmitSignUp = (event) => {
         event.preventDefault()
-        putUpdateProfile(input)
+        putUpdateProfile(form)
     }
 
     return (
@@ -23,9 +22,9 @@ const FormEditPersonalData = ({ dataProfile }) => {
             <form onSubmit={onSubmitSignUp}>
                 <TextField id="outlined-basic" label="Nome" variant="outlined"
                     required
-                    value={input.name}
+                    value={form.name}
                     name={'name'}
-                    onChange={onChangeInput}
+                    onChange={handleInputChange}
                     placeholder='Nome e sobrenome'
                     margin={'normal'}
                     fullWidth
@@ -33,18 +32,18 @@ const FormEditPersonalData = ({ dataProfile }) => {
                 <TextField id="outlined-basic" label="E-mail" variant="outlined"
                     required
                     type='email'
-                    value={input.email}
+                    value={form.email}
                     name={'email'}
-                    onChange={onChangeInput}
+                    onChange={handleInputChange}
                     placeholder='email@email.com'
                     margin={'normal'}
                     fullWidth
                 />
                 <TextField id="outlined-basic" label="CPF" variant="outlined"
                     required
-                    value={input.cpf}
+                    value={form.cpf}
                     name={'cpf'}
-                    onChange={onChangeInput}
+                    onChange={handleInputChange}
                     placeholder='000.000.000-0'
                     margin={'normal'}
                     fullWidth

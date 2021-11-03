@@ -26,7 +26,7 @@ const rotate = keyframes`
     }
 
     to {
-    transform: scale(2.5);
+    transform: scale(3);
     }
 `;
 

@@ -15,7 +15,7 @@ const Header = () => {
             return "Cadastrar"
         }else if(history.location.pathname === "/cadastro-endereco" || history.location.pathname === "/perfil/editar-endereco"){
             return "Meu Endereço"
-        }else if(history.location.pathname === "/restaurante"){
+        }else if(history.location.pathname === "/tela-inicial"){
             return "FutureEats"
         }else if(history.location.pathname.includes("/detalhes-restaurante/")){
             return "Restaurante"
