@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { ScreenContainer,
         AlignAddress, 
         Title, 
@@ -16,6 +16,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import { withStyles } from '@material-ui/core/styles'
 import { Button } from "@material-ui/core"
 import CircularProgress from '@material-ui/core/CircularProgress'
+import { GlobalStateContext } from "../../GlobalState/GlobalStateContext"
+import CardRestaurantDetail from "../../components/CardRestaurantDetail/CardRestaurantDetail"
+
 
 const StyledRadio = withStyles({
     root: {
@@ -32,7 +35,16 @@ const StyledRadio = withStyles({
       padding: '0.7rem',
       marginTop: '0.7rem',
       marginBottom: '1rem',
-      backgroundColor: `active ? "#5cb646" : "#5CB646 50%"`,
+      backgroundColor: "#5cb646",
+    }
+  })(Button)
+
+  const StyledButtonEmpty = withStyles({
+    root: {
+      padding: '0.7rem',
+      marginTop: '0.7rem',
+      marginBottom: '1rem',
+      backgroundColor: "#5CB64650",
     }
   })(Button)
 
@@ -40,11 +52,28 @@ const CartPage = () => {
     const address = useRequestData({}, `/profile/address`)
     const [isLoading, setIsLoading] = useState(false)
     const [emptyCartButton, setEmptyCartButton] = useState("")
+    const {cart, setCart, cartId, setCartId, } = useContext(GlobalStateContext)
 
     // EXEMPLO PARA FAZER O BOTÃO MUDAR DE COR
     useEffect(() => {
           setEmptyCartButton(false)
       }, [])
+
+
+      const ProductsCart = cart && cart.map((product)=>{
+          return(
+            <CardRestaurantDetail detail={product.item} />
+          )
+      })
+
+      const TotalReturn = () => {
+          let soma = 0
+          cart.map((product)=>{
+              soma = soma + (product.quantidade * product.item.price)
+          })
+          return soma.toFixed(2).toString().replace(".", ",")
+      }
+
 
     return (
         <ScreenContainer>
@@ -56,15 +85,14 @@ const CartPage = () => {
                     <p id={"address"}>{`${address.address.street}, ${address.address.number}, ${address.address.complement} ${address.address.neighbourhood} 
                     ${address.address.city}-${address.address.state} `}</p></div>
             </AlignAddress> : <Loading />}
-
-            <p>Carrinho vazio</p>
+                {(cart.length > 0)? (ProductsCart):<p>Carrinho vazio</p>}
 
             <Shipping>
                 Frete: R$0,00
             </Shipping>
 
             <Total>
-                <p>SUBTOTAL</p> <p><b>R$00,00</b></p>
+                <p>SUBTOTAL</p> <p><b>R${TotalReturn()}</b></p>
             </Total>
 
             <Payment>
@@ -84,9 +112,10 @@ const CartPage = () => {
             <FormControlLabel value="cartao" control={<StyledRadio />} label="Cartão de crédito" />
             </RadioGroup>
             </Payment>
-
             <AlignConfirm>
-            <StyledButton
+                {(cart.length > 0)?
+
+            (<StyledButton
                 type={"submit"}
                 fullWidth
                 variant={"contained"}
@@ -94,10 +123,22 @@ const CartPage = () => {
                 padding={10}
                 active={emptyCartButton}
             >
-                { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Confirmar</> }
-            </StyledButton>
-            </AlignConfirm>
 
+                { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Confirmar</> }
+            </StyledButton>)
+            :
+            (<StyledButtonEmpty
+                type={"submit"}
+                fullWidth
+                variant={"contained"}
+                color={"primary"}
+                padding={10}
+                active={emptyCartButton}
+            >
+
+                { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Confirmar</> }
+            </StyledButtonEmpty>)}
+            </AlignConfirm>
             <Footer />
         </ScreenContainer>
     )

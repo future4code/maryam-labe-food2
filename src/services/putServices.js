@@ -1,26 +1,23 @@
 import axios from 'axios'
 import { BASE_URL } from '../constants/urls'
-import { goToHome } from '../routes/coordinator'
 
-export const putAddAdress = ( body, cleanFields, history, setIsLoading) => {
+export const putAddAdress = ( body, history, cleanFields, goToHome) => {
     const config = {
         method: 'put',
         url: BASE_URL + "/address",
         headers: { 'auth': localStorage.getItem('token') },
         data: body,
     }
-    setIsLoading(true)
     axios(config)
         .then((res) => {
             localStorage.setItem('token',res.data.token)
             window.alert("Seu endereço foi salvo!")
             cleanFields()
-            setIsLoading(false)
             goToHome(history)
         })
         .catch((err) => {
-            setIsLoading(false)
-            window.alert(err.data.message)
+            console.log("AQUII", err)
+            window.alert(err.response)
         })
 
 }

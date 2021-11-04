@@ -15,7 +15,8 @@ import {
   DeliveryTime,
   RestaurantShipping,
   RestaurantAddress,
-  TimeShipping
+  TimeShipping,
+  BorderBottom
 } from "./style";
 
 const RestaurantPage = () => {
@@ -58,7 +59,7 @@ const RestaurantPage = () => {
           categoria = detail.category;
           return (
             <div>
-              <h5><u>{categoria}</u></h5>
+              <BorderBottom><h5>{categoria}</h5></BorderBottom>
               <CardRestaurantDetail detail={detail} />
             </div>
           );
@@ -79,7 +80,7 @@ const RestaurantPage = () => {
           <TimeShipping>
             <DeliveryTime>{dataRestaurant.deliveryTime} min</DeliveryTime>
             <RestaurantShipping>
-              Frete R$ {dataRestaurant.shipping},00{" "}
+              Frete R$ {dataRestaurant.shipping},00
             </RestaurantShipping>
           </TimeShipping>
           <RestaurantAddress>{dataRestaurant.address}</RestaurantAddress>
