@@ -110,8 +110,9 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 <!-- PROJECT WIREFRAME  -->
 <h2 id="wireframe">:jigsaw: Wireframe</h2>
   <div align="center">
-    <img alt="Wireframe" src="" />
+    <img alt="Wireframe" src="https://user-images.githubusercontent.com/78452566/140319000-27aeae12-03d5-4975-8a72-84cf832fd186.png" />
   </div>
+
 
 <!-- PROJECT REQUIREMENTS-->
 <h2 id="requisitos">:leftwards_arrow_with_hook: Pré-requisitos</h2>
