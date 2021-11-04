@@ -7,6 +7,7 @@ import lupa from '../../assets/search.svg'
 import useForm from '../../hooks/useForm'
 import Footer from '../../components/Footer/Footer'
 import useProtectedPage from '../../hooks/useProtectedPage'
+import Header from "../../components/Header/Header"
 
 
 const HomePage = () => {
@@ -257,8 +258,9 @@ const HomePage = () => {
     })
     return (
         <MainHome>
+            <Header />
             <HeaderTitle>
-                <span>FutureEats</span>
+                {/* <span>FutureEats</span> */}
             </HeaderTitle>
             <FiltrosConainer>
                 <InputPesquisaRestaurante onSubmit={filtroPorNome} >
