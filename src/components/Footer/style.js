@@ -10,14 +10,13 @@ export const Container = styled.div`
 
 export const ContainerFooter = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 5px;
     border-top: 1px solid ${borderColor};
-    height: 42px;
+    height: 8vh;
+    width: 100vw;
     
     img{
-        margin: 16px;
         width: 36px;
         height: 36px;
     }

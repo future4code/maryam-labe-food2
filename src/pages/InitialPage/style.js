@@ -6,27 +6,23 @@ export {logo}
 
 export const Container = styled.div`
     position: absolute;
-    // z-index: 30;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: ${backgroundColorInitialPage};
-    // background-image: url(${logo});
-    // background-position: center;
-    // background-size: 32%;
-    // background-repeat:no-repeat;
+    background-color: ${backgroundColorInitialPage};    
     `
 
-    // Keyframes de pulse
+// Keyframes de pulse
 const rotate = keyframes`
     from {
     transform: scale(1.5);
     }
 
     to {
-    transform: scale(3);
+    transform: scale(4);
     }
 `;
 
@@ -35,12 +31,9 @@ export const PulseButton = styled.div`
     background-position: center;
     background-size: 32%;
     background-repeat:no-repeat;
-
     display: inline-block;    
-    animation: ${rotate} 3s linear infinite;
+    animation: ${rotate} 3s linear; // colocar  linear infinite se quiser o pulse
     width: 60%;
     height: 30%;
-    position: absolute;
-    // border: 1px solid rgb(255, 121, 46);
-    // background: #ff792e;
+    // position: absolute;
 `;
