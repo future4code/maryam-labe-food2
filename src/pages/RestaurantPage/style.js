@@ -50,19 +50,13 @@ export const TitleRestaurante = styled.div`
   width: 84px;
   height: 19px;
 `;
-const MainCard = styled.div`
-  width: 20.5rem;
-  height: 11.75rem;
-  padding: 0 0 1rem;
-  border-radius: 8px;
-  border: solid 1px #b8b8b8;
-`;
 
 export const ImgCard = styled.img`
   margin: 17px 16px 12px;
   width: 328px;
   height: 120px;
   border-radius: 8px;
+  object-fit: contain;
 
 `;
 
@@ -96,7 +90,6 @@ export const CategoryRestaurant = styled.div`
 export const DeliveryTime = styled.span`
   width: 328px;
   height: 18px;
-  margin: 8px 8px 8px ;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: "normal";
@@ -110,7 +103,6 @@ export const DeliveryTime = styled.span`
 export const RestaurantShipping = styled.span`
   width: 328px;
   height: 18px;
-  margin: 8px 8px 8px ;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: "normal";
@@ -133,4 +125,11 @@ export const RestaurantAddress = styled.span`
   line-height: "normal";
   letter-spacing: -0.39px;
   color: #b8b8b8;
+`
+export const TimeShipping = styled.div`
+  width: 328px;
+  height: 18px;
+  margin: 8px 8px 8px ;
+  display: flex;
+  justify-content:center;
 `

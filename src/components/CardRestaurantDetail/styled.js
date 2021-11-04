@@ -26,6 +26,8 @@ export const CardDetailImage = styled.img`
   width: 96px;
   height: 112px;
   margin: 0 16px 0 0;
+  object-fit: contain;
+
 `
 export const CardDetailTextName = styled.span`
   width: 167px;
