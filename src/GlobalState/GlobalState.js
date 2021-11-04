@@ -7,6 +7,8 @@ const GlobalState = (props) =>{
 
     const[activeOrder, setActiveOrder] = useState({})
     const[dataProfile, setDataProfile] = useState({})
+    const [cart, setCart] = useState([])
+    const [cartId, setCartId] = useState([])
 
     const getDataProfile = () => {
         axios.get(`${BASE_URL}/profile`, {headers:{
@@ -33,7 +35,7 @@ const GlobalState = (props) =>{
     }
 
     return(
-        <GlobalStateContext.Provider value={{dataProfile, getDataProfile, address, getAddress, activeOrder, getActiveOrder}}>
+        <GlobalStateContext.Provider value={{dataProfile, getDataProfile, activeOrder, getActiveOrder, cart, setCart, cartId, setCartId}}>
                 {props.children}
         </GlobalStateContext.Provider>
     )

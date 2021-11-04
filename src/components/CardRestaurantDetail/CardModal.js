@@ -42,7 +42,7 @@ class SimpleModal extends React.Component {
   }
 
   render() {
-    const { classes, open, setOpen } = this.props;
+    const { classes, open, setOpen, AddToCart, Products } = this.props;
 
     return (
       <div>
@@ -81,7 +81,7 @@ class SimpleModal extends React.Component {
           </Select>
         </FormControl>
             <SimpleModalWrapped />
-            <Button color="primary" onClick={() => setOpen(true)}>Adicionar ao carrinho</Button>
+            <Button color="primary" onClick={() => {setOpen(false); AddToCart(Products, this.state.item)}}>Adicionar ao carrinho</Button>
           </div>
         </Modal>
       </div>

@@ -1,14 +1,17 @@
-import React from 'react';
-import RouterPage from './routes/RouterPage';
+import React from "react";
+import RouterPage from "./routes/RouterPage";
 import { ThemeProvider } from "@material-ui/core";
-import theme from './constants/theme';
+import theme from "./constants/theme";
+import GlobalState from "./GlobalState/GlobalState";
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <RouterPage />
-    </ThemeProvider>
+    <GlobalState>
+      <ThemeProvider theme={theme}>
+        <RouterPage />
+      </ThemeProvider>
+    </GlobalState>
   );
-}
+};
 
 export default App;
