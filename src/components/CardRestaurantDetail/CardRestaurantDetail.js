@@ -11,6 +11,7 @@ import {
   ContainerCard,
   CardDetail2,
   ButtonAdd,
+  ButtonRemove,
   AddItemCard
 } from "./styled";
 
@@ -32,8 +33,11 @@ const CardRestaurantDetail = (props) => {
       setCartId(newItemId)
     } else {
       const AuxCart = [...cart]
-      AuxCart[position].quantidade = quantidade
+      const AuxCartId = [...cartId]
+      AuxCartId.splice(position, 1)
+      AuxCart.splice(position, 1)
       setCart(AuxCart)
+      setCartId(AuxCartId)
     }
     
   }
@@ -48,6 +52,19 @@ const CardRestaurantDetail = (props) => {
         )
     }
     
+  }
+
+  const ChangeButton = () => {
+    const position = cartId.indexOf(props.detail.id)
+    if(position === -1) {
+      return(
+          <ButtonAdd size="small" onClick={OpenModal}>ADICIONAR</ButtonAdd>
+        )
+    } else {
+      return(
+        <ButtonRemove size="small" onClick={()=> AddToCart(props.detail, 0)}>REMOVER</ButtonRemove> 
+      )
+    }
   }
 
   console.log(props);
@@ -65,10 +82,8 @@ const CardRestaurantDetail = (props) => {
 
           <CardDetailTextName> {props.detail.name} </CardDetailTextName>
             <AddItemCard>
-            <h3>{renderizaQuantidade()}</h3>
+            <p>{renderizaQuantidade()}</p>
             </AddItemCard>
-
-      
           </ContainerCard>
 
           <ContainerCard>
@@ -83,9 +98,8 @@ const CardRestaurantDetail = (props) => {
 
             <ContainerCard>
 
-            <CardDetailPrice>R$ {props.detail.price} </CardDetailPrice>
-            <ButtonAdd size="small" onClick={OpenModal}>ADICIONAR</ButtonAdd>
-            {/* <ButtonRemove size="small" onClick={AddToCart}>REMOVER</ButtonRemove> */}
+            <CardDetailPrice>R$ {props.detail.price.toFixed(2).toString().replace(".", ",")} </CardDetailPrice>
+            {ChangeButton()}
         
           </ContainerCard>
           </CardDetail2>

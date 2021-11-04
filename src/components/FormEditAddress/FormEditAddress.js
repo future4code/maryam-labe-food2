@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button'
 import useForm from '../../hooks/useForm'
 import { useHistory } from 'react-router-dom'
 import { putAddAdress } from '../../services/putServices'
+import {goToHome} from "../../routes/coordinator"
 
 const FormEditAddress = ({ address }) => {
     const history = useHistory()
@@ -19,8 +20,9 @@ const FormEditAddress = ({ address }) => {
     
     const onSubmitFormAdress = (event) => {
         event.preventDefault()
-        putAddAdress(form, history, clear)
+        putAddAdress(form, history, clear, goToHome)
     }
+    
 
     return (
 

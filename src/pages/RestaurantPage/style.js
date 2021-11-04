@@ -132,3 +132,12 @@ export const TimeShipping = styled.div`
   display: flex;
   justify-content:center;
 `
+
+export const BorderBottom = styled.div`
+  border-bottom: 2px solid black;
+  margin-top: 0;
+  margin-bottom: 0;
+  h5{
+    margin-bottom: 0;
+  }
+`
