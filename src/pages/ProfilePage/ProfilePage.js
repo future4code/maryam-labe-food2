@@ -7,7 +7,16 @@ import OrdersHistory from '../../components/OrdersHistory/OrdersHistory'
 import PersonalData from '../../components/PersonalData/PersonalData'
 import UserAdress from '../../components/UserAdress/UserAdress'
 import { goToLogin } from '../../routes/coordinator'
-import { ContainerProfile } from './style'
+import { ContainerProfile, AlignConfirm } from './style'
+import { withStyles } from '@material-ui/core/styles'
+
+const StyledButton = withStyles({
+    root: {
+      padding: '0.7rem',
+      marginTop: '0.7rem',
+      marginBottom: '1rem'
+    }
+  })(Button)
 
 const ProfilePage = () => {
     const history = useHistory()
@@ -26,7 +35,8 @@ const ProfilePage = () => {
                 <p>Histórico de Pedidos</p>
                 <hr/>
                 <OrdersHistory/>
-                <Button
+                <AlignConfirm>
+                <StyledButton
                     variant="contained" 
                     color="primary"
                     type={'submit'}
@@ -35,7 +45,8 @@ const ProfilePage = () => {
                     onClick={()=>logout()}
                 >
                     Logout
-                </Button>
+                </StyledButton>
+                </AlignConfirm>
             </ContainerProfile>
             <Footer/>
         </div>
