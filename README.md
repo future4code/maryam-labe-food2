@@ -126,7 +126,8 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/future4code/maryam-labe-food2
+### HTTPS
+$ git clone https://github.com/future4code/maryam-labe-food2.git
 
 # Acesse a pasta do projeto no terminal
 $ cd ./maryam-labe-food2
