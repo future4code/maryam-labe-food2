@@ -12,7 +12,7 @@ const EditAddress = () => {
         <ContainerForm>
             <Header />
             <InputsContainer>
-                {address.address && <FormEditAddress address={address} />}
+                {address.address && <FormEditAddress address={address}/>}
             </InputsContainer>
         </ContainerForm>
     )
