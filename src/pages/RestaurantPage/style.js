@@ -11,7 +11,6 @@ export const ContainerRestaurant = styled.div`
   align-items: center;
   width: 360px;
   height: 834px;
-  border: 1px solid black;
 
 `;
 export const ImageRestaurante = styled.img`
