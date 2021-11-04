@@ -26,6 +26,8 @@ export const CardDetailImage = styled.img`
   width: 96px;
   height: 112px;
   margin: 0 16px 0 0;
+  object-fit: contain;
+
 `
 export const CardDetailTextName = styled.span`
   width: 167px;
@@ -75,4 +77,15 @@ export const RectangleButton = styled.div`
   border-radius: 8px;
   border: solid 1px #5cb646;
 `
+
+export const ContaierModal = styled.div`
+  width: 300px;
+  height: 30vh;
+
+`
+
+
+
+
+
 

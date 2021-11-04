@@ -21,7 +21,7 @@
   <a href="#imagens">Imagens</a> &#xa0; | &#xa0;  
   <a href="#wireframe"> Wireframe</a> &#xa0; | &#xa0;
   <a href="#requisitos">Pré requisitos</a> &#xa0; | &#xa0;   
-  <a href="#desenvolvedores">Desenvolvedores</a>
+  <a href="#desenvolvedores">Desenvolvedores</a> &#xa0; 
 </p>
 
 <!-- PROJECT SOBRE -->
