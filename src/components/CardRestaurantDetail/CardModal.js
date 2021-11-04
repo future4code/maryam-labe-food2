@@ -9,18 +9,14 @@ import  {FormControl}  from "@material-ui/core";
 
 
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
 
 function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
 
   return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
+    top: `58%`,
+    left: `57%`,
+    transform: `translate(-58%, -57%)`,
+    width: '80vw',
   };
 }
 
@@ -55,6 +51,8 @@ class SimpleModal extends React.Component {
           aria-describedby="simple-modal-description"
           open={open}
           onClose={() => setOpen(false)}
+          alignItems="center"
+          justify="center"
         >
           <div style={getModalStyle()} className={classes.paper}>
             <Typography variant="h6">

@@ -76,3 +76,14 @@ export const RectangleButton = styled.div`
   border: solid 1px #5cb646;
 `
 
+export const ContaierModal = styled.div`
+  width: 300px;
+  height: 30vh;
+
+`
+
+
+
+
+
+
