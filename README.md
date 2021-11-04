@@ -30,7 +30,7 @@
 
 <!-- PROJECT SITE -->
 <h2 id="site">:earth_americas: Link do site </h2>
-https://romantic-futureeats.surge.sh/login
+https://romantic-futureeats.surge.sh
 
 <!-- PROJECT TECHNOLOGIES -->
 <h2 id="tecnologias"> 🛠 Tecnologias </h2>
