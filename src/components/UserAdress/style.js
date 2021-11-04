@@ -4,7 +4,7 @@ import { backgroundColorAdress, textColor } from '../../constants/colors'
 export const ContainerAdress = styled.div`
 
     display: flex;
-    /* justify-content: start; */
+    justify-content: start;
     justify-content: space-between;
     padding: 5px;
     background-color: ${backgroundColorAdress};
@@ -24,7 +24,6 @@ export const ContainerAdress = styled.div`
 
         #adress{
             width: 20.5rem;
-            height: 1.125rem;
             margin: 0.5rem 0 0;
             letter-spacing: -0.39px;
             color: black;

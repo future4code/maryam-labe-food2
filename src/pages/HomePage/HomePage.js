@@ -8,6 +8,7 @@ import useForm from '../../hooks/useForm'
 import Footer from '../../components/Footer/Footer'
 import useProtectedPage from '../../hooks/useProtectedPage'
 import Header from "../../components/Header/Header"
+import Loading from "../../components/Loading/Loading"
 
 
 const HomePage = () => {
@@ -284,7 +285,7 @@ const HomePage = () => {
                 {(restaurantes.length > 0) ?
                 (RenderizaCards)
                 :
-                (<TextoVazio>
+                (<Loading/>) && (<TextoVazio>
                     <h1>Ops... <br/>Não encontramos nada por aqui!</h1>
                     <h4>Revise os filtros ativados ou tente novamente.</h4>
                 </TextoVazio>)}

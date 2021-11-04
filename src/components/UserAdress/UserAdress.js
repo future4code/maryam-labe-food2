@@ -18,7 +18,7 @@ const UserAdress = () => {
             {address.address ? <ContainerAdress>
                 <div id={"adress"}>
                     <p id={"title"}>Endereço cadastrado</p>
-                    <p id={"adress"}>{`${address.address.street}, ${address.address.number}, ${address.address.complement} ${address.address.neighbourhood} 
+                    <p id={"adress"}>{`${address.address.street}, ${address.address.number}, ${address.address.complement}, ${address.address.neighbourhood} 
                     ${address.address.city}-${address.address.state} `}</p>
                 </div>
                 <img src={editPen} alt={"Caneta de editar"} onClick={() => { goToEditAdress(history) }} />
