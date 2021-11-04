@@ -17,7 +17,7 @@ const Footer = () => {
         <Container>
             {history.location.pathname === "/restaurante" && <ActiveOrder />}
             <ContainerFooter>
-                <img src={history.location.pathname === "/restaurante" ? homepageGreen : homepageWhite} alt={"Icone Página Inicial"} onClick={() => goToHome(history)} />
+                <img src={history.location.pathname === "/tela-inicial" ? homepageGreen : homepageWhite} alt={"Icone Página Inicial"} onClick={() => goToHome(history)} />
                 <img src={history.location.pathname === "/carrinho" ? shoppingCartGreen : shoppingCartWhite} alt={"Icone Carrinho"} onClick={() => goToCart(history)} />
                 <img src={history.location.pathname === "/perfil" ? avatarGreen : avatarWhite} alt={"Icone Perfil"} onClick={() => goToProfile(history)} />
             </ContainerFooter>
