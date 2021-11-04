@@ -20,7 +20,7 @@ export const putAddAdress = ( body, cleanFields, history, setIsLoading) => {
         })
         .catch((err) => {
             setIsLoading(false)
-            window.alert(err.data.message)
+            window.alert(err.response.data.message)
         })
 
 }
