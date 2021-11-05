@@ -293,8 +293,11 @@ const HomePage = () => {
                     <h1>Ops... <br/>Não encontramos nada por aqui!</h1>
                     <h4>Revise os filtros ativados ou tente novamente.</h4>
                 </TextoVazio>)} */}
-                {isLoading && <Loading/>}
-                {RenderizaCards}
+                {isLoading ? <Loading/> : RenderizaCards }
+                {restaurantes.length === 0 && <TextoVazio>
+                    <h1>Ops... <br/>Não encontramos nada por aqui!</h1>
+                    <h4>Revise os filtros ativados ou tente novamente.</h4>
+                </TextoVazio>}
             </ContainerFeed>
             <Footer />
         </MainHome>
