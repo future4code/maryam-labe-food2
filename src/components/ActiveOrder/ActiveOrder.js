@@ -13,7 +13,7 @@ const ActiveOrder = () => {
     setTimeout(()=>{
         setIsActiveOrder(false)
         goToHome(history)
-    },10000)
+    },5000)
 
 
     return(

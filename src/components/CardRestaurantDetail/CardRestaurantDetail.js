@@ -27,20 +27,22 @@ const CardRestaurantDetail = (props) => {
   const AddToCart = (item, quantidade, restaurantId) => {
     const position = cartId.indexOf(item.id)
     const positionId = shippingId.indexOf(restaurantId)
-    console.log(restaurantId)
-    console.log(shippingId)
-    console.log(positionId)
-    console.log(cart)
+    console.log('res',restaurantId)
+    console.log('ship',shippingId)
+    console.log('pid',positionId)
+    console.log('cart',cart)
 
-    if (positionId !== -1 || cartId.length === 0){
+    
       if((position === -1)){
+        if (positionId !== -1 || cartId.length === 0){
         const newProduct = { item: item, quantidade: quantidade, restaurantId: restaurantId}
         const newCart = [... cart, newProduct]
         setCart(newCart)
         const newItemId = [...cartId, item.id]
         setCartId(newItemId)
+        // addShipping para utilizar com pedidos em multiplas lojas
         props.addShipping()
-  
+        }
       } else {
         const AuxCart = [...cart]
         const AuxCartId = [...cartId]
@@ -50,10 +52,11 @@ const CardRestaurantDetail = (props) => {
         setCartId(AuxCartId)
         removeShipping()
       }
-    }
+    
 
   }
 
+  // removeShipping para utilizar com pedidos em multiplas lojas
   const removeShipping = () => {
     let products = []
     products = shippingId.filter((ship) => {

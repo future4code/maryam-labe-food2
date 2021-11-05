@@ -64,8 +64,13 @@ export const AlignConfirm = styled.div `
     flex-direction: column;
     justify-content: center;
     width: 95vw;
+    margin-bottom: 10vh;
 `
 
-export const ContainerCart = styled.div`
-    margin-bottom: 80px;
-`
+// export const ContainerCart = styled.div`
+//     margin-bottom: 80px;
+//     bottom: 0;
+//     width: 95vw;
+
+
+// `
