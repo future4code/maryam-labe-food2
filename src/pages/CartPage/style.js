@@ -65,3 +65,7 @@ export const AlignConfirm = styled.div `
     justify-content: center;
     width: 95vw;
 `
+
+export const ContainerCart = styled.div`
+    margin-bottom: 80px;
+`

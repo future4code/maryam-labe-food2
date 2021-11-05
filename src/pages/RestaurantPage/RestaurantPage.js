@@ -1,11 +1,12 @@
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import React, { useState } from "react";
+import React, { useState, useContext} from "react";
 import { useParams } from "react-router-dom";
 import CardRestaurantDetail from "../../components/CardRestaurantDetail/CardRestaurantDetail";
 import { useEffect } from "react";
 import { BASE_URL } from "../../constants/urls";
+import { GlobalStateContext } from '../../GlobalState/GlobalStateContext'
 import {
   CategoryRestaurant,
   Container,
@@ -16,13 +17,13 @@ import {
   RestaurantShipping,
   RestaurantAddress,
   TimeShipping,
-  BorderBottom
+  BorderBottom, 
 } from "./style";
 
 const RestaurantPage = () => {
-
   const [dataRestaurant, setDataRestaurant] = useState({});
   const [dataProducts, setDataProducts] = useState([]);
+  const {cart, shipping, setShipping, shippingId, setShippingId} = useContext(GlobalStateContext)
 
   const params = useParams();
 
@@ -44,8 +45,21 @@ const RestaurantPage = () => {
         console.log(error.message);
       });
   }, []);
-  console.log(dataRestaurant);
-  console.log(dataProducts);
+
+ 
+  
+  const addShipping = () => {
+    const position = shippingId.indexOf(dataRestaurant.id)
+    if (position === -1 && dataRestaurant.shipping !== undefined){
+      const newShipping = [... shipping, dataRestaurant.shipping]
+      setShipping(newShipping)
+    }
+    if (dataRestaurant.id !== undefined){
+      const newShippingId = [...shippingId, dataRestaurant.id]
+      setShippingId(newShippingId)
+    }
+  }
+
 
   const RestaurantDetail = () => {
     const dataProductsOrdenado = dataProducts.sort((a, b) => {
@@ -60,11 +74,11 @@ const RestaurantPage = () => {
           return (
             <div>
               <BorderBottom><h5>{categoria}</h5></BorderBottom>
-              <CardRestaurantDetail detail={detail} />
+              <CardRestaurantDetail restaurantId={dataRestaurant.id}  addShipping={addShipping} detail={detail} />
             </div>
           );
         } else {
-          return <CardRestaurantDetail detail={detail} />;
+          return <CardRestaurantDetail restaurantId={dataRestaurant.id}  addShipping={addShipping} detail={detail} />;
         }
       });
     return <div>{renderizaCard}</div>;
