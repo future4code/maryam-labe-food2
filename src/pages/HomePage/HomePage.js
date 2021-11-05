@@ -285,7 +285,7 @@ const HomePage = () => {
                 {(restaurantes.length > 0) ?
                 (RenderizaCards)
                 :
-                (<Loading/>) && (<TextoVazio>
+                (<TextoVazio>
                     <h1>Ops... <br/>Não encontramos nada por aqui!</h1>
                     <h4>Revise os filtros ativados ou tente novamente.</h4>
                 </TextoVazio>)}
