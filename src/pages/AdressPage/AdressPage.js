@@ -10,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton'
 import ArrowBackIos from '@material-ui/icons/ArrowBackIos'
 import { withStyles } from '@material-ui/core/styles'
 import useProtectedPage from '../../hooks/useProtectedPage'
+import { goToHome } from "../../routes/coordinator"
 
 const StyledButton = withStyles({
   root: {
@@ -38,7 +39,7 @@ const AddressPage = () => {
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        putAddAdress(form, clear, history, setIsLoading)
+        putAddAdress(form, history, clear, goToHome)
     }
 
     return (

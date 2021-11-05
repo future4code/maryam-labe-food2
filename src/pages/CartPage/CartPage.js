@@ -61,6 +61,7 @@ const CartPage = () => {
     const [emptyCartButton, setEmptyCartButton] = useState("")
     const [payment, setPayment] = useState('')
     const {cart, setCart, cartId, setCartId, shipping, setShipping, shippingId, setShippingId, isActiveOrder, setIsActiveOrder} = useContext(GlobalStateContext)
+    const [span, setSpan] = useState('')
 
     // EXEMPLO PARA FAZER O BOTÃO MUDAR DE COR
     useEffect(() => {
@@ -129,8 +130,7 @@ const CartPage = () => {
               setIsActiveOrder(true)
           })
           .catch((err) => {
-              alert('algo deu errado')
-              console.log(err.response)
+            setSpan(err.response.data.message)
           })
       }
 
@@ -138,7 +138,7 @@ const CartPage = () => {
     return (
         <ScreenContainer>
             <Header />
-            <ContainerCart>
+           
             {address.address ?
             <AlignAddress>
                 <div id={"address"}>
@@ -174,6 +174,9 @@ const CartPage = () => {
             </RadioGroup>
             </Payment>
             <AlignConfirm>
+                {span}
+                {isActiveOrder &&
+                    (<ActiveOrder />)}
                 {(cart.length > 0)?
 
             (<StyledButton
@@ -201,9 +204,7 @@ const CartPage = () => {
                 { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Confirmar</> }
             </StyledButtonEmpty>)}
             </AlignConfirm>
-            </ContainerCart>
-            {isActiveOrder &&
-            (<ActiveOrder />)}
+            
             <Footer />
         </ScreenContainer>
     )

@@ -17,6 +17,7 @@ export const putAddAdress = ( body, history, cleanFields, goToHome) => {
         })
         .catch((err) => {
             window.alert(err.response)
+            console.log(err.response.data)
         })
 }
 
