@@ -42,5 +42,7 @@ export const LogoImage = styled.img`
   object-fit: contain;
 `
 
-
+export const ContainerErrorMsg = styled.div`
+  color: #5CB646;  
+`
 
