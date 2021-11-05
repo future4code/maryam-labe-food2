@@ -28,6 +28,7 @@ const HomePage = () => {
     const [petiscosFilter, setPetiscosFilter] = useState(false)
     const [mexicanaFilter, setMexicanaFilter] = useState(false)
     const [form, onChange, clear] = useForm({name:''})
+    const [isLoading, setIsLoading] = useState(false)
     
     useEffect(() => {
         const headers = {
@@ -37,10 +38,13 @@ const HomePage = () => {
             }
         }
 
+        setIsLoading(true)
+
         axios.get(`${BASE_URL}/restaurants`, headers)
         .then((res) => {
             setRestaurantes(res.data.restaurants)
             setTodosRestaurantes(res.data.restaurants)
+            setIsLoading(false)
         })
         .catch((err) => {
             console.log(err.data)
@@ -282,13 +286,15 @@ const HomePage = () => {
                 </Filtros>
             </FiltrosConainer>
             <ContainerFeed>
-                {(restaurantes.length > 0) ?
+                {/* {(restaurantes.length > 0) ?
                 (RenderizaCards)
                 :
                 (<TextoVazio>
                     <h1>Ops... <br/>Não encontramos nada por aqui!</h1>
                     <h4>Revise os filtros ativados ou tente novamente.</h4>
-                </TextoVazio>)}
+                </TextoVazio>)} */}
+                {isLoading && <Loading/>}
+                {RenderizaCards}
             </ContainerFeed>
             <Footer />
         </MainHome>
