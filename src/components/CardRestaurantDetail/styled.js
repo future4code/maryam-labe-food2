@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
-
-
 export const ContainerCard = styled.div`
   display: flex;
-  height: 33.35%;
-  width: 217px;
+  height: 33.4%;
+  width: 101%;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 0;
@@ -22,14 +20,9 @@ export const CardDetail = styled.div`
   border: solid 1px #00000025;
   padding-bottom: 0;
 `;
-export const CardDetail2 = styled.div`
-display: block;
-flex-direction: row;
-justify-content: space-between;
-height: 100%;
-margin-bottom: 0;
-padding-bottom: 0;
-margin-bottom: 0;
+export const ContainerDetail = styled.div`
+height: 102%;
+width: 65.5%;
 `
 export const CardDetailImage = styled.img`
   width: 96px;
@@ -67,7 +60,7 @@ export const CardDetailDescription = styled.span`
 export const CardDetailPrice = styled.span`
   width: 118px;
   height: 19px;
-  margin: 4px 8px 15px 16px;
+  margin: 4px 8px 15px 10px;
   font-family: "Roboto";
   font-size: 16px;
   font-weight: "normal";
@@ -77,25 +70,11 @@ export const CardDetailPrice = styled.span`
   letter-spacing: -0.39px;
   color: var(--black);
 `
-export const RectangleButton = styled.div`
-  width: 20%;
-  height: 31px;
-  margin: 7px 0 0 80px;
-  padding: 8px 20.5px 9px 21.5px;
-  border-radius: 8px;
-  border: solid 1px #5cb646;
-`
-
-export const ContaierModal = styled.div`
-  width: 300px;
-  height: 30vh;
-
-`
 export const ButtonAdd = styled.button`
   color:#5cb646;
   font-size: 10px;
   background-color: white;
-  width: 30%;
+  width: 35%;
   height: 70%;
   align-self:flex-end;
   margin-bottom: 0;
@@ -107,7 +86,7 @@ export const ButtonRemove = styled.button`
   color:#e02020;
   font-size: 10px;
   background-color: white;
-  width: 30%;
+  width: 35%;
   height: 70%;
   align-self:flex-end;
   border-top-left-radius: 0.5em;
@@ -121,12 +100,13 @@ export const AddItemCard = styled.div`
   align-items: center;
   font-size: 15px;
   background-color: white;
+  margin-top: 0;
   width: 20%;
   height: 35px;
   border-bottom-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   border: solid 1px #5cb646;
-  align-self:flex-end;
+  align-self: flex-start;
 
 `
 
