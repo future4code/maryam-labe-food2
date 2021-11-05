@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import SimpleModalWrapped from "./CardModal"
+import SimpleModalWrapped from "./CardModal";
 import { useHistory } from "react-router-dom";
 import { GlobalStateContext } from "../../GlobalState/GlobalStateContext";
 import {
@@ -9,10 +9,10 @@ import {
   CardDetailDescription,
   CardDetailPrice,
   ContainerCard,
-  CardDetail2,
   ButtonAdd,
   ButtonRemove,
-  AddItemCard
+  AddItemCard,
+  ContainerDetail,
 } from "./styled";
 
 const CardRestaurantDetail = (props) => {
@@ -20,8 +20,8 @@ const CardRestaurantDetail = (props) => {
   const {cart, setCart, cartId, setCartId, shipping, setShipping, shippingId, setShippingId} = useContext(GlobalStateContext)
 
   const OpenModal = () => {
-    setOpen(true)
-  }
+    setOpen(true);
+  };
 
 
   const AddToCart = (item, quantidade, restaurantId) => {
@@ -96,27 +96,30 @@ const CardRestaurantDetail = (props) => {
 
 
   const renderizaQuantidade = () => {
-    const position = cartId.indexOf(props.detail.id)
-    if(position !== -1) {
-      return(
-        <div>
-          {cart[position].quantidade}
-        </div>
-        )
+    const position = cartId.indexOf(props.detail.id);
+    if (position !== -1) {
+      return (
+      <AddItemCard><p>{cart[position].quantidade}</p></AddItemCard>
+      )            
+      
+
     }
-    
-  }
+  };
 
   const ChangeButton = () => {
-    const position = cartId.indexOf(props.detail.id)
-    if(position === -1) {
-      return(
-          <ButtonAdd size="small" onClick={OpenModal}>ADICIONAR</ButtonAdd>
-        )
+    const position = cartId.indexOf(props.detail.id);
+    if (position === -1) {
+      return (
+        <ButtonAdd size="small" onClick={OpenModal}>
+          ADICIONAR
+        </ButtonAdd>
+      );
     } else {
-      return(
-        <ButtonRemove size="small" onClick={()=> AddToCart(props.detail, 0)}>REMOVER</ButtonRemove> 
-      )
+      return (
+        <ButtonRemove size="small" onClick={() => AddToCart(props.detail, 0)}>
+          REMOVER
+        </ButtonRemove>
+      );
     }
   }
   const history = useHistory();
@@ -124,36 +127,27 @@ const CardRestaurantDetail = (props) => {
     <div>
       <div>
         <CardDetail>
-
           <CardDetailImage src={props.detail.photoUrl} />
 
-          <CardDetail2>
-
-          <ContainerCard>
-
-          <CardDetailTextName> {props.detail.name} </CardDetailTextName>
-            <AddItemCard>
-            <p>{renderizaQuantidade()}</p>
-            </AddItemCard>
-          </ContainerCard>
-
-          <ContainerCard>
-            <CardDetailDescription>
-              {" "}
-              {props.detail.description}{" "}
-            </CardDetailDescription>
+          <ContainerDetail>
+            <ContainerCard>
+              <CardDetailTextName> {props.detail.name} </CardDetailTextName>
+              {renderizaQuantidade()}
+            </ContainerCard>
+            <ContainerCard>
+              <CardDetailDescription>
+                {" "}
+                {props.detail.description}{" "}
+              </CardDetailDescription>
             </ContainerCard>
 
-
-
-
             <ContainerCard>
-
-            <CardDetailPrice>R$ {props.detail.price.toFixed(2).toString().replace(".", ",")} </CardDetailPrice>
-            {ChangeButton()}
-        
-          </ContainerCard>
-          </CardDetail2>
+              <CardDetailPrice>
+                R$ {props.detail.price.toFixed(2).toString().replace(".", ",")}{" "}
+              </CardDetailPrice>
+              {ChangeButton()}
+            </ContainerCard>
+          </ContainerDetail>
         </CardDetail>
       </div>
       {open === true && <SimpleModalWrapped restaurantId={props.restaurantId} open={open} setOpen={setOpen} AddToCart = {AddToCart} Products = {props.detail}/>}

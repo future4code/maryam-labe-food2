@@ -117,17 +117,16 @@ export const MainHome = styled.div`
     margin-bottom: 80px;
 `
 
-export const TextoVazio = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    h1{
-        text-align: center;
+export const TextoVazio = styled.div`        
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+  max-width: 400px;
+    
+    button { 
+        margin-top: 15vh;
     }
 
-    h4{
-        text-align: center;
-    }
 `
 

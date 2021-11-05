@@ -10,11 +10,15 @@ import useProtectedPage from '../../hooks/useProtectedPage'
 import Header from "../../components/Header/Header"
 import ActiveOrder from "../../components/ActiveOrder/ActiveOrder"
 import { GlobalStateContext } from "../../GlobalState/GlobalStateContext"
+import Loading from "../../components/Loading/Loading"
+import { Typography } from "@material-ui/core"
+import Button from "@material-ui/core/Button"
+
 
 
 const HomePage = () => {
     useProtectedPage()
-    
+
     const [restaurantes, setRestaurantes] = useState([])
     const [todosRestaurantes, setTodosRestaurantes] = useState([])
     const [flagRestaurantes, setFlagRestaurantes] = useState(false)
@@ -30,30 +34,33 @@ const HomePage = () => {
     const [mexicanaFilter, setMexicanaFilter] = useState(false)
     const [form, onChange, clear] = useForm({name:''})
     const {isActiveOrder, setIsActiveOrder} = useContext(GlobalStateContext)
-    
+    const [isLoading, setIsLoading] = useState(false)
+
     useEffect(() => {
         const headers = {
-            headers:{
+            headers: {
                 auth: window.localStorage.getItem('token'),
-                'Content-Type':'application/json'
+                'Content-Type': 'application/json'
             }
         }
 
-        axios.get(`${BASE_URL}/restaurants`, headers)
-        .then((res) => {
-            setRestaurantes(res.data.restaurants)
-            setTodosRestaurantes(res.data.restaurants)
-        })
-        .catch((err) => {
-            console.log(err.data)
-        })
+        setIsLoading(true)
 
+        axios.get(`${BASE_URL}/restaurants`, headers)
+            .then((res) => {
+                setRestaurantes(res.data.restaurants)
+                setTodosRestaurantes(res.data.restaurants)
+                setIsLoading(false)
+            })
+            .catch((err) => {
+                console.log(err.data)
+            })
     }, [flagRestaurantes])
 
 
     const filtrosBotoes = (filtro, desliga) => {
 
-        if (filtro === 'burguer'){
+        if (filtro === 'burguer') {
             setBurguerFilter(!burguerFilter)
             setAsiaticaFilter(false)
             setSaudaveisFilter(false)
@@ -67,11 +74,11 @@ const HomePage = () => {
 
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Hamburguer')
+                return (restaurante.category === 'Hamburguer')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'asiatica'){
+        } else if (filtro === 'asiatica') {
             setAsiaticaFilter(!asiaticaFilter)
             setBurguerFilter(false)
             setSaudaveisFilter(false)
@@ -85,11 +92,11 @@ const HomePage = () => {
 
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Asiática')
+                return (restaurante.category === 'Asiática')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'massa'){
+        } else if (filtro === 'massa') {
             setMassaFilter(!massaFilter)
             setBurguerFilter(false)
             setSaudaveisFilter(false)
@@ -103,11 +110,11 @@ const HomePage = () => {
 
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Italiana')
+                return (restaurante.category === 'Italiana')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'saudavel'){
+        } else if (filtro === 'saudavel') {
             setSaudaveisFilter(!saudaveisFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -121,11 +128,11 @@ const HomePage = () => {
 
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Saudável')
+                return (restaurante.category === 'Saudável')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'arabe'){
+        } else if (filtro === 'arabe') {
             setArabeFilter(!arabeFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -139,11 +146,11 @@ const HomePage = () => {
 
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Árabe')
+                return (restaurante.category === 'Árabe')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'sorvete'){
+        } else if (filtro === 'sorvete') {
             setSorvetesFilter(!sorvetesFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -156,11 +163,11 @@ const HomePage = () => {
             setMexicanaFilter(false)
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Sorvetes')
+                return (restaurante.category === 'Sorvetes')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'carnes'){
+        } else if (filtro === 'carnes') {
             setCarnesFilter(!carnesFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -173,11 +180,11 @@ const HomePage = () => {
             setMexicanaFilter(false)
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Carnes')
+                return (restaurante.category === 'Carnes')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'baiana'){
+        } else if (filtro === 'baiana') {
             setBaianaFilter(!baianaFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -190,11 +197,11 @@ const HomePage = () => {
             setMexicanaFilter(false)
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Baiana')
+                return (restaurante.category === 'Baiana')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'petiscos'){
+        } else if (filtro === 'petiscos') {
             setPetiscosFilter(!petiscosFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -207,11 +214,11 @@ const HomePage = () => {
             setMexicanaFilter(false)
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Petiscos')
+                return (restaurante.category === 'Petiscos')
             })
 
             setRestaurantes(listaFiltrada)
-        } else if (filtro === 'mexicana'){
+        } else if (filtro === 'mexicana') {
             setMexicanaFilter(!mexicanaFilter)
             setBurguerFilter(false)
             setMassaFilter(false)
@@ -224,13 +231,13 @@ const HomePage = () => {
             setPetiscosFilter(false)
 
             const listaFiltrada = todosRestaurantes && todosRestaurantes.filter((restaurante) => {
-                return(restaurante.category === 'Mexicana')
+                return (restaurante.category === 'Mexicana')
             })
 
             setRestaurantes(listaFiltrada)
         }
 
-        if (desliga){
+        if (desliga) {
             setFlagRestaurantes(!flagRestaurantes)
         }
     }
@@ -244,7 +251,7 @@ const HomePage = () => {
         todosRestaurantes.map((restaurante) => {
             let arrayDoRestaurante = restaurante.name.split(' ')
             arrayDoRestaurante.filter((palavra) => {
-                if (arrayDeBusca.indexOf(palavra.toUpperCase()) !== -1){
+                if (arrayDeBusca.indexOf(palavra.toUpperCase()) !== -1) {
                     elementosFiltrados.push(restaurante)
                 }
             })
@@ -255,10 +262,12 @@ const HomePage = () => {
     }
 
     const RenderizaCards = restaurantes && restaurantes.map((restaurante) => {
-        return(
+        return (
             <CardHome restaurante={restaurante} />
         )
     })
+
+
     return (
         <MainHome>
             <Header />
@@ -284,13 +293,43 @@ const HomePage = () => {
                 </Filtros>
             </FiltrosConainer>
             <ContainerFeed>
-                {(restaurantes.length > 0) ?
-                (RenderizaCards)
-                :
-                (<TextoVazio>
-                    <h1>Ops... <br/>Não encontramos nada por aqui!</h1>
-                    <h4>Revise os filtros ativados ou tente novamente.</h4>
-                </TextoVazio>)}
+                {isLoading ? <Loading /> : RenderizaCards}
+                {restaurantes.length === 0 && <TextoVazio>
+                    <Typography
+                        color={"neutral"}
+                        variant={"h1"}
+                        align={"center"}
+                        gutterBottom={true}
+                    >
+                        <strong>Ops!</strong>
+                    </Typography>
+                    <Typography
+                        color={"neutral"}
+                        variant={"overline"}
+                        align={"center"}
+                        gutterBottom={true}
+                    >
+                        Não encontramos nada por aqui!
+                    </Typography>
+                    <Typography
+                        color={"neutral"}
+                        variant={"body1"}
+                        align={"center"}
+                        gutterBottom={true}
+                    >
+                        Revise os filtros ativados ou tente novamente.
+                    </Typography>
+                    <div>
+                        <Button
+                            fullWidth
+                            variant={"contained"}
+                            color={"primary"}
+                            onClick={() => window.location.reload()}
+                        >
+                            Voltar para a página Inicial
+                        </Button>
+                    </div>
+                </TextoVazio>}
             </ContainerFeed>
             <Footer />
         </MainHome>

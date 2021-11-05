@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { primaryColor } from "../../constants/colors"
 
 
 export const ScreenContainer = styled.div`
@@ -42,5 +43,7 @@ export const LogoImage = styled.img`
   object-fit: contain;
 `
 
-
+export const ContainerErrorMsg = styled.div`
+  color: ${primaryColor};  
+`
 

@@ -16,10 +16,8 @@ export const putAddAdress = ( body, history, cleanFields, goToHome) => {
             goToHome(history)
         })
         .catch((err) => {
-            console.log("AQUII", err)
             window.alert(err.response)
         })
-
 }
 
 export const putUpdateProfile = (body) => {
