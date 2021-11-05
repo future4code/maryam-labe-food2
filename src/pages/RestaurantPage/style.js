@@ -10,7 +10,6 @@ export const ContainerRestaurant = styled.div`
   flex-direction: column;
   align-items: center;
   width: 360px;
-  /* height: 834px; */
 
 `;
 export const ImageRestaurante = styled.img`

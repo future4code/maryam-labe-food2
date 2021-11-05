@@ -67,10 +67,3 @@ export const AlignConfirm = styled.div `
     margin-bottom: 10vh;
 `
 
-// export const ContainerCart = styled.div`
-//     margin-bottom: 80px;
-//     bottom: 0;
-//     width: 95vw;
-
-
-// `

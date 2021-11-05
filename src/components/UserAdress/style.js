@@ -4,7 +4,6 @@ import { backgroundColorAdress, textColor } from '../../constants/colors'
 export const ContainerAdress = styled.div`
     display: flex;
     flex-direction: row;
-    /* justify-content: start; */
     justify-content: space-between;
     padding: 5px;
     background-color: ${backgroundColorAdress};
@@ -12,7 +11,6 @@ export const ContainerAdress = styled.div`
     #adress{
         display: flex;
         flex-direction: column;
-        /* align-self: flex-start; */
         
         #title{
             color: ${textColor};

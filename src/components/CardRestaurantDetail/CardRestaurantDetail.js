@@ -81,8 +81,8 @@ const CardRestaurantDetail = (props) => {
 
       console.log(positionOfShipping)
 
-      const auxShippingId = [... shippingId]
-      const auxShipping = [... shipping]
+      const auxShippingId = [...shippingId]
+      const auxShipping = [...shipping]
 
       auxShippingId.splice(position, 1)
       auxShipping.splice(positionOfShipping, 1)
@@ -91,7 +91,7 @@ const CardRestaurantDetail = (props) => {
       setShipping(auxShipping)
     } else {
       const position = shippingId.indexOf(props.restaurantId)
-      const auxShippingId = [... shippingId]
+      const auxShippingId = [...shippingId]
       auxShippingId.splice(position,1)
       setShippingId(auxShippingId)
     }
@@ -125,7 +125,7 @@ const CardRestaurantDetail = (props) => {
       );
     }
   }
-  const history = useHistory();
+ 
   return (
     <div>
       <div>

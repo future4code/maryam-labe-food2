@@ -13,7 +13,6 @@ export const ContainerCardOrder = styled.div`
     border: 1px solid #b8b8b8;
     border-radius: 8px;
     width: 20.5rem;
-    /* height: 7.375rem; */
     margin: 0.438rem;
     padding: 8px;
 

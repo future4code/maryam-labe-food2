@@ -5,8 +5,7 @@ import { ScreenContainer,
         Shipping,
         Total,
         Payment,
-        AlignConfirm,
-        ContainerCart } from "./style"
+        AlignConfirm } from "./style"
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import Loading from "../../components/Loading/Loading"
@@ -21,8 +20,6 @@ import { GlobalStateContext } from "../../GlobalState/GlobalStateContext"
 import CardRestaurantDetail from "../../components/CardRestaurantDetail/CardRestaurantDetail"
 import axios from "axios"
 import { BASE_URL } from "../../constants/urls"
-import { goToHome } from "../../routes/coordinator"
-import { useHistory } from "react-router-dom"
 import ActiveOrder from "../../components/ActiveOrder/ActiveOrder"
 
 
@@ -55,7 +52,6 @@ const StyledRadio = withStyles({
   })(Button)
 
 const CartPage = () => {
-    const history = useHistory()
     const address = useRequestData({}, `/profile/address`)
     const [isLoading, setIsLoading] = useState(false)
     const [emptyCartButton, setEmptyCartButton] = useState("")
@@ -163,8 +159,6 @@ const CartPage = () => {
             <RadioGroup
                 aria-label="position"
                 name="position"
-                // value={this.state.value}
-                // onChange={this.handleChange}
                 column
             >
 

@@ -8,7 +8,6 @@ import {goToHome} from "../../routes/coordinator"
 
 const FormEditAddress = ({ address }) => {
     const history = useHistory()
-    //useForm -> observar a ordem, não importa o nome. form, onChange, clear
     const [form, handleInputChange, clear] = useForm({
         street: address.address && address.address.street,
         number: address.address && address.address.number,

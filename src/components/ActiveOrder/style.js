@@ -5,7 +5,6 @@ export const ContainerActiveOrder = styled.div`
     display: flex;
     background-color: ${primaryColor};
     align-items: center;
-    /* position: fixed; */
 
     img{
         width: 2rem;
