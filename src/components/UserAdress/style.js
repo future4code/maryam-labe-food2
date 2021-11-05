@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { backgroundColorAdress, textColor } from '../../constants/colors'
 
 export const ContainerAdress = styled.div`
-
     display: flex;
-    justify-content: start;
+    flex-direction: row;
+    /* justify-content: start; */
     justify-content: space-between;
     padding: 5px;
     background-color: ${backgroundColorAdress};
