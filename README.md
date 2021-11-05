@@ -96,8 +96,8 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 <h2 id="imagens">:iphone: Imagens Mobile</h2>
 
 - **Página inicial**
-<img alt="login" src="(https://user-images.githubusercontent.com/88054888/140587734-845c5904-47d4-4c41-9a84-2582e10c6074.jpg)" width="314"/>
-![login](https://user-images.githubusercontent.com/88054888/140587734-845c5904-47d4-4c41-9a84-2582e10c6074.jpg)
+<img alt="login" src="https://user-images.githubusercontent.com/88054888/140587734-845c5904-47d4-4c41-9a84-2582e10c6074.jpg" width="314"/>
+
 
 - **Página Restaurantes**
 <img alt="restaurantes" src="" width="314"/>
