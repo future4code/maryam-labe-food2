@@ -96,7 +96,7 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 <h2 id="imagens">:iphone: Imagens Mobile</h2>
 
 - **Página inicial**
-<img alt="login" src="" width="314"/>
+<img alt="login" src="src/assets/toRedame/login.png" width="314"/>
 
 - **Página Restaurantes**
 <img alt="restaurantes" src="" width="314"/>
