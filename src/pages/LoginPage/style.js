@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { primaryColor } from "../../constants/colors"
 
 
 export const ScreenContainer = styled.div`
@@ -43,6 +44,6 @@ export const LogoImage = styled.img`
 `
 
 export const ContainerErrorMsg = styled.div`
-  color: #5CB646;  
+  color: ${primaryColor};  
 `
 
