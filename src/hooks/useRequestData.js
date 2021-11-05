@@ -15,12 +15,11 @@ const useRequestData = (initialData, path) => {
     useEffect(() => {
         if (localStorage.getItem('token')) {
             axios(config)
-                .then((res) => {
+                .then((res) => {                    
                     setData(res.data)
                 })
                 .catch((err) => {
                     window.alert('Erro de solicitação.')
-
                 })
         } else {
             setData(initialData)
