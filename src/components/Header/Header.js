@@ -11,30 +11,30 @@ const Header = () => {
     }
 
     const page = () => {
-        if(history.location.pathname === "/cadastro"){
+        if (history.location.pathname === "/cadastro") {
             return "Cadastrar"
-        }else if(history.location.pathname === "/cadastro-endereco" || history.location.pathname === "/perfil/editar-endereco"){
+        } else if (history.location.pathname === "/cadastro-endereco" || history.location.pathname === "/perfil/editar-endereco") {
             return "Meu Endereço"
-        }else if(history.location.pathname === "/tela-inicial"){
+        } else if (history.location.pathname === "/tela-inicial") {
             return "FutureEats"
-        }else if(history.location.pathname.includes("/restaurante/")){
+        } else if (history.location.pathname.includes("/restaurante/")) {
             return "Restaurante"
-        }else if(history.location.pathname === "/perfil"){
+        } else if (history.location.pathname === "/perfil") {
             return "Meu Perfil"
-        } else if (history.location.pathname.includes("/perfil/editar/")){
+        } else if (history.location.pathname.includes("/perfil/editar/")) {
             return "Editar"
-        } else if(history.location.pathname === "/carrinho"){
+        } else if (history.location.pathname === "/carrinho") {
             return "Meu Carrinho"
-        } else if (history.location.pathname === "/restaurantes/busca"){
+        } else if (history.location.pathname === "/restaurantes/busca") {
             return "Busca"
         }
     }
 
-    return(
+    return (
         <ContainerHeader>
             {history.location.pathname === "/cadastro-endereco" || history.location.pathname === "/perfil/editar-endereco"
-            || history.location.pathname.includes("/perfil/editar/") || history.location.pathname === "/cadastro" || history.location.pathname.includes("/restaurante/")
-            || history.location.pathname === "/restaurantes/busca" ? <img src={back} alt={"Botão Voltar"} onClick={goBackPage}/>: <div></div>}
+                || history.location.pathname.includes("/perfil/editar/") || history.location.pathname === "/cadastro" || history.location.pathname.includes("/restaurante/")
+                || history.location.pathname === "/restaurantes/busca" ? <img src={back} alt={"Botão Voltar"} onClick={goBackPage} /> : <div></div>}
             {<p>{page()}</p>}
             <div></div>
         </ContainerHeader>
