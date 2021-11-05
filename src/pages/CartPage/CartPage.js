@@ -5,7 +5,8 @@ import { ScreenContainer,
         Shipping,
         Total,
         Payment,
-        AlignConfirm } from "./style"
+        AlignConfirm,
+        ContainerCart } from "./style"
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import Loading from "../../components/Loading/Loading"
@@ -18,6 +19,11 @@ import { Button } from "@material-ui/core"
 import CircularProgress from '@material-ui/core/CircularProgress'
 import { GlobalStateContext } from "../../GlobalState/GlobalStateContext"
 import CardRestaurantDetail from "../../components/CardRestaurantDetail/CardRestaurantDetail"
+import axios from "axios"
+import { BASE_URL } from "../../constants/urls"
+import { goToHome } from "../../routes/coordinator"
+import { useHistory } from "react-router-dom"
+import ActiveOrder from "../../components/ActiveOrder/ActiveOrder"
 
 
 const StyledRadio = withStyles({
@@ -49,10 +55,12 @@ const StyledRadio = withStyles({
   })(Button)
 
 const CartPage = () => {
+    const history = useHistory()
     const address = useRequestData({}, `/profile/address`)
     const [isLoading, setIsLoading] = useState(false)
     const [emptyCartButton, setEmptyCartButton] = useState("")
-    const {cart, setCart, cartId, setCartId, } = useContext(GlobalStateContext)
+    const [payment, setPayment] = useState('')
+    const {cart, setCart, cartId, setCartId, shipping, setShipping, shippingId, setShippingId, isActiveOrder, setIsActiveOrder} = useContext(GlobalStateContext)
 
     // EXEMPLO PARA FAZER O BOTÃO MUDAR DE COR
     useEffect(() => {
@@ -62,22 +70,75 @@ const CartPage = () => {
 
       const ProductsCart = cart && cart.map((product)=>{
           return(
-            <CardRestaurantDetail detail={product.item} />
+            <CardRestaurantDetail restaurantId={product.restaurantId} detail={product.item} />
           )
       })
 
       const TotalReturn = () => {
-          let soma = 0
+          let somaCarrinho = 0
           cart.map((product)=>{
-              soma = soma + (product.quantidade * product.item.price)
+              somaCarrinho = somaCarrinho + (product.quantidade * product.item.price)
           })
+
+          let somaShipping = 0
+          shipping.map((ship) => {
+              somaShipping = somaShipping + ship
+          })
+
+          let soma = somaCarrinho + somaShipping
           return soma.toFixed(2).toString().replace(".", ",")
+      }
+
+      const TotalShipping = () => {
+        let somaShipping = 0
+        shipping.map((ship) => {
+            somaShipping = somaShipping + ship
+        })
+
+        return somaShipping.toFixed(2).toString().replace(".", ",")
+      }
+
+      const choosePayment = (payment) => {
+          setPayment(payment)
+      }
+
+      const doOrder = () => {
+          const products = cart.map((product) => {
+              return (
+                  {
+                      id: product.item.id,
+                      quantity: product.quantidade
+                  }
+              )
+          })
+
+          const body = {
+              products: products,
+              paymentMethod: payment
+          }
+
+          const headers = {
+              headers:{
+                  auth: window.localStorage.getItem('token'),
+                  'Content-Type':'application/json'
+              }
+          }
+
+          axios.post(`${BASE_URL}/restaurants/${cart[0].restaurantId}/order`, body, headers)
+          .then((res) => {
+              setIsActiveOrder(true)
+          })
+          .catch((err) => {
+              alert('algo deu errado')
+              console.log(err.response)
+          })
       }
 
 
     return (
         <ScreenContainer>
             <Header />
+            <ContainerCart>
             {address.address ?
             <AlignAddress>
                 <div id={"address"}>
@@ -88,7 +149,7 @@ const CartPage = () => {
                 {(cart.length > 0)? (ProductsCart):<p>Carrinho vazio</p>}
 
             <Shipping>
-                Frete: R$0,00
+                Frete: R${TotalShipping()}
             </Shipping>
 
             <Total>
@@ -107,9 +168,9 @@ const CartPage = () => {
                 column
             >
 
-            <FormControlLabel value="dinheiro" control={<StyledRadio />} label="Dinheiro" />
+            <FormControlLabel onClick={() => choosePayment('money')} value="dinheiro" control={<StyledRadio />} label="Dinheiro" />
             
-            <FormControlLabel value="cartao" control={<StyledRadio />} label="Cartão de crédito" />
+            <FormControlLabel onClick={() => choosePayment('creditcard')} value="cartao" control={<StyledRadio />} label="Cartão de crédito" />
             </RadioGroup>
             </Payment>
             <AlignConfirm>
@@ -122,6 +183,7 @@ const CartPage = () => {
                 color={"primary"}
                 padding={10}
                 active={emptyCartButton}
+                onClick={doOrder}
             >
 
                 { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Confirmar</> }
@@ -139,6 +201,9 @@ const CartPage = () => {
                 { isLoading ? <CircularProgress color={"inherit"} size={24}/> : <>Confirmar</> }
             </StyledButtonEmpty>)}
             </AlignConfirm>
+            </ContainerCart>
+            {isActiveOrder &&
+            (<ActiveOrder />)}
             <Footer />
         </ScreenContainer>
     )

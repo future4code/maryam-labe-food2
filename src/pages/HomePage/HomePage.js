@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import axios from 'axios'
 import { BASE_URL } from '../../constants/urls'
 import { HeaderTitle, InputPesquisaRestaurante, Filtros, ContainerFeed, Lupa, InputFiltro, FiltrosConainer, FiltrosOff, FiltrosOn, MainHome, TextoVazio } from "./style"
@@ -8,6 +8,8 @@ import useForm from '../../hooks/useForm'
 import Footer from '../../components/Footer/Footer'
 import useProtectedPage from '../../hooks/useProtectedPage'
 import Header from "../../components/Header/Header"
+import ActiveOrder from "../../components/ActiveOrder/ActiveOrder"
+import { GlobalStateContext } from "../../GlobalState/GlobalStateContext"
 import Loading from "../../components/Loading/Loading"
 import { Typography } from "@material-ui/core"
 import Button from "@material-ui/core/Button"
@@ -30,7 +32,8 @@ const HomePage = () => {
     const [baianaFilter, setBaianaFilter] = useState(false)
     const [petiscosFilter, setPetiscosFilter] = useState(false)
     const [mexicanaFilter, setMexicanaFilter] = useState(false)
-    const [form, onChange, clear] = useForm({ name: '' })
+    const [form, onChange, clear] = useForm({name:''})
+    const {isActiveOrder, setIsActiveOrder} = useContext(GlobalStateContext)
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {
@@ -54,7 +57,6 @@ const HomePage = () => {
             })
     }, [flagRestaurantes])
 
-    console.log(restaurantes)
 
     const filtrosBotoes = (filtro, desliga) => {
 
