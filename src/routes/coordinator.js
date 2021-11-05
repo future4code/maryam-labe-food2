@@ -1,7 +1,3 @@
-// import React from "react"
-// import { useHistory } from "react-router-dom"
-
-// const  history=useHistory()
 
 export const goToHome = (history) => {
     history.push("/tela-inicial")

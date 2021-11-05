@@ -35,5 +35,4 @@ export const PulseButton = styled.div`
     animation: ${rotate} 3s linear; // colocar  linear infinite se quiser o pulse
     width: 60%;
     height: 30%;
-    // position: absolute;
 `;

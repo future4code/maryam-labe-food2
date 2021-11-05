@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import axios from 'axios'
 import { BASE_URL } from '../../constants/urls'
 import { HeaderTitle, InputPesquisaRestaurante, Filtros, ContainerFeed, Lupa, InputFiltro, FiltrosConainer, FiltrosOff, FiltrosOn, MainHome, TextoVazio } from "./style"
-import CardHome from "../../components/CardHome"
+import CardHome from "../../components/CardHome/CardHome"
 import lupa from '../../assets/search.svg'
 import useForm from '../../hooks/useForm'
 import Footer from '../../components/Footer/Footer'
@@ -33,7 +33,6 @@ const HomePage = () => {
     const [petiscosFilter, setPetiscosFilter] = useState(false)
     const [mexicanaFilter, setMexicanaFilter] = useState(false)
     const [form, onChange, clear] = useForm({name:''})
-    const {isActiveOrder, setIsActiveOrder} = useContext(GlobalStateContext)
     const [isLoading, setIsLoading] = useState(false)
 
     useEffect(() => {

@@ -5,7 +5,6 @@ import useForm from '../../hooks/useForm'
 import { putUpdateProfile } from '../../services/putServices'
 
 const FormEditPersonalData = ({ dataProfile }) => {
-    //useForm -> observar a ordem, não importa o nome. form, onChange, clear
     const [form, handleInputChange, clear] = useForm({
         name: dataProfile.user && dataProfile.user.name,
         email: dataProfile.user && dataProfile.user.email,
