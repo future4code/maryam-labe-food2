@@ -12,7 +12,3 @@ export const ErrorPageContainer = styled.div `
     }
 `
 
-export const ErrorImage = styled.img `
-  width: 64vw;
-  max-width: 450px;
-`
