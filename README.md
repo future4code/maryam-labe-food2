@@ -24,15 +24,12 @@
 
 <!-- PROJECT LOGO -->
 <h2 id="logo"> :framed_picture:  Logo </h2>
-- Logo para fundo escuro:
-<div align="center">
-  <img alt= "Logo branco" src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" />
-</div>
-<hr />
-- Logo para fundo claro:
-<div align="center">
-  <img alt= "Logo preto" src="https://user-images.githubusercontent.com/78452566/140569091-d693d327-1d60-4c64-a8d2-62d7ad6c71ac.png"  width="200px"  />
-</div>
+
+   Logo para fundo escuro            |       Logo para fundo claro:
+:-----------------------------------:|:-----------------------------------:
+<img alt= "Logo branco" src="https://user-images.githubusercontent.com/78452566/140055243-4d254c00-03c6-483f-b663-3ce8b8610b3e.png"  width="200px" />  |  <img alt= "Logo preto" src="https://user-images.githubusercontent.com/78452566/140569091-d693d327-1d60-4c64-a8d2-62d7ad6c71ac.png"  width="200px"  />
+
+
 
 <!-- PROJECT SOBRE -->
 <h2 id="sobre">:notebook: Sobre </h2>
@@ -96,53 +93,53 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 <h2 id="imagens">:iphone: Imagens Mobile</h2>
 
 - **Página inicial**
-<img alt="login" src="https://user-images.githubusercontent.com/88054888/140587734-845c5904-47d4-4c41-9a84-2582e10c6074.jpg" width="214"/>
+<img alt="login" src="https://user-images.githubusercontent.com/88054888/140587734-845c5904-47d4-4c41-9a84-2582e10c6074.jpg" width="214" hspace="20"/>
 
 
 - **Página inicial com preenchimento incorretos**
 <p float="left">
-<img alt="login erro no usuário" src="https://user-images.githubusercontent.com/88054888/140588013-1462467b-e977-4718-8255-fdad31c68812.jpg" width="214"/>
-<img alt="login erro na senha" src="https://user-images.githubusercontent.com/88054888/140588101-90a87df9-7284-4b63-85b2-86c4736c800a.jpg" width="214"/>
+<img alt="login erro no usuário" src="https://user-images.githubusercontent.com/88054888/140588013-1462467b-e977-4718-8255-fdad31c68812.jpg" width="214" hspace="20"/>
+<img alt="login erro na senha" src="https://user-images.githubusercontent.com/88054888/140588101-90a87df9-7284-4b63-85b2-86c4736c800a.jpg" width="214" hspace="20"/>
  </p>
 
 
 - **Página cadastro **
 <p float="left">
-  <img alt="cadastro principal" src="https://user-images.githubusercontent.com/88054888/140588214-a38c753f-fab7-4844-a74f-3ddafa05a349.jpg" width="214"/>
-  <img alt="cadastro endereço" src="https://user-images.githubusercontent.com/88054888/140588304-800a6bf9-72c4-4d39-b469-71b5ee8f1238.jpg" width="214"/>
+  <img alt="cadastro principal" src="https://user-images.githubusercontent.com/88054888/140588214-a38c753f-fab7-4844-a74f-3ddafa05a349.jpg" width="214" hspace="20"/>
+  <img alt="cadastro endereço" src="https://user-images.githubusercontent.com/88054888/140588304-800a6bf9-72c4-4d39-b469-71b5ee8f1238.jpg" width="214" hspace="20"/>
 </p>
 
 
 - **Página Restaurantes**
-<img alt="restaurantes" src="https://user-images.githubusercontent.com/88054888/140588416-d4503878-712c-4607-8147-5f357f839a58.jpg" width="214"/>
+<img alt="restaurantes" src="https://user-images.githubusercontent.com/88054888/140588416-d4503878-712c-4607-8147-5f357f839a58.jpg" width="214" hspace="20"/>
 
 
 - **Página Busca por Restaurantes**
-<img alt="restaurante específico" src="https://user-images.githubusercontent.com/88054888/140588378-50eaab68-7b40-4704-8b1a-7b61a9ec3c6c.jpg" width="214"/>
+<img alt="restaurante específico" src="https://user-images.githubusercontent.com/88054888/140588378-50eaab68-7b40-4704-8b1a-7b61a9ec3c6c.jpg" width="214" hspace="20"/>
 
 
 - **Página Cardápio do Restaurante**
-<img alt="cardapio" src="https://user-images.githubusercontent.com/88054888/140588407-fceb2cc1-70d1-477f-aec9-f42cbc5924ef.jpg" width="214"/>
+<img alt="cardapio" src="https://user-images.githubusercontent.com/88054888/140588407-fceb2cc1-70d1-477f-aec9-f42cbc5924ef.jpg" width="214" hspace="20"/>
 
 
 - **Página Carrinho confirmando Pedido**
 <p float="left">
-  <img alt="confirmando pedido" src="https://user-images.githubusercontent.com/88054888/140588509-c6c1588b-45fb-4583-88fa-95c931a3a5fc.jpg" width="214"/>
-  <img alt="confirmando pedido" src="https://user-images.githubusercontent.com/88054888/140588532-5be8d94b-9d2e-4092-a881-3075378b42e1.jpg" width="214"/>
-  <img alt="pedido confirmado" src="https://user-images.githubusercontent.com/88054888/140588472-cb401541-716c-414d-9efa-aadfcaa58074.jpg" width="214"/>
+  <img alt="confirmando pedido" src="https://user-images.githubusercontent.com/88054888/140588509-c6c1588b-45fb-4583-88fa-95c931a3a5fc.jpg" width="214" hspace="20"/>
+  <img alt="confirmando pedido" src="https://user-images.githubusercontent.com/88054888/140588532-5be8d94b-9d2e-4092-a881-3075378b42e1.jpg" width="214" hspace="20"/>
+  <img alt="pedido confirmado" src="https://user-images.githubusercontent.com/88054888/140588472-cb401541-716c-414d-9efa-aadfcaa58074.jpg" width="214" hspace="20"/>
 </p>
 
 
 - **Página Perfil com histórico de Pedidos e edição de Cadastro**
 <p float="left">
-  <img alt="histórico de pedidos" src="https://user-images.githubusercontent.com/88054888/140588564-35cb7667-9e81-4a68-b67c-ee2c39c158d3.jpg" width="214"/>
-  <img alt="edição perfil" src="https://user-images.githubusercontent.com/88054888/140588637-147238a3-3fc5-4c4a-b69c-9a00324eaefb.jpg" width="214"/>
-  <img alt="edição cadastro" src="https://user-images.githubusercontent.com/88054888/140588620-855ea2c4-b770-4e7a-8168-dd9073e0a9a4.jpg" width="214"/>
+  <img alt="histórico de pedidos" src="https://user-images.githubusercontent.com/88054888/140588564-35cb7667-9e81-4a68-b67c-ee2c39c158d3.jpg" width="214" hspace="20"/>
+  <img alt="edição perfil" src="https://user-images.githubusercontent.com/88054888/140588637-147238a3-3fc5-4c4a-b69c-9a00324eaefb.jpg" width="214" hspace="20"/>
+  <img alt="edição cadastro" src="https://user-images.githubusercontent.com/88054888/140588620-855ea2c4-b770-4e7a-8168-dd9073e0a9a4.jpg" width="214" hspace="20"/>
 </p>
 
 
 - **Página Erro**
-<img alt="página de erro" src="https://user-images.githubusercontent.com/88054888/140588672-ba9925bb-03b9-4cbd-8293-8a0aa98488e4.jpg" width="214"/>
+<img alt="página de erro" src="https://user-images.githubusercontent.com/88054888/140588672-ba9925bb-03b9-4cbd-8293-8a0aa98488e4.jpg" width="214" hspace="20"/>
 
 
 
