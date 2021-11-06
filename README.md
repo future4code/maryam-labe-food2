@@ -142,6 +142,10 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 <img alt="página de erro" src="https://user-images.githubusercontent.com/88054888/140588672-ba9925bb-03b9-4cbd-8293-8a0aa98488e4.jpg" width="214" hspace="20"/>
 
 
+<!-- PROJECT GIF-->
+<h2 id="imagens">:iphone: Gif Mobile</h2>
+
+https://user-images.githubusercontent.com/78452566/140591159-22bf2556-e593-4532-b915-1afa4bbfc9cc.mp4
 
 
 <!-- PROJECT WIREFRAME  -->
