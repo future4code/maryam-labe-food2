@@ -139,7 +139,8 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 
 
 - **Página Erro**
-<img alt="página de erro" src="https://user-images.githubusercontent.com/88054888/140588672-ba9925bb-03b9-4cbd-8293-8a0aa98488e4.jpg" width="214" hspace="20"/>
+<img alt="página de erro" src="https://user-images.githubusercontent.com/88054888/140595530-d7c9719c-80fa-4ec7-8c93-cf0346e6bb7d.jpg" width="214" hspace="20"/>
+
 
 
 <!-- PROJECT GIF-->
