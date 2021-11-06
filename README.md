@@ -122,7 +122,7 @@ Abaixo segue o que foi utilizado na criação deste projeto:
   <img alt="carrinho vazio" src="https://user-images.githubusercontent.com/78452566/140595856-8f5d687a-5bf0-4b01-9a4b-85d7a77e693b.jpg" width="224" hspace="10"/>
   <img alt="com produtos" src="https://user-images.githubusercontent.com/88054888/140588509-c6c1588b-45fb-4583-88fa-95c931a3a5fc.jpg" width="214" hspace="10"/>
   <img alt="pedido confirmado" src="https://user-images.githubusercontent.com/88054888/140588472-cb401541-716c-414d-9efa-aadfcaa58074.jpg" width="214" hspace="10"/>
-  <img alt="já existe outro pedido em andamento" src="https://user-images.githubusercontent.com/88054888/140588532-5be8d94b-9d2e-4092-a881-3075378b42e1.jpg" width="214" hspace="10"/>  
+  <img alt="já existe outro pedido em andamento" src="https://user-images.githubusercontent.com/88054888/140588532-5be8d94b-9d2e-4092-a881-3075378b42e1.jpg" width="224" hspace="10"/>  
   <img alt="falta esolher a forma de pagamento" src="https://user-images.githubusercontent.com/78452566/140596016-8c366de0-8e7b-4a3a-9ef4-662e9949c9e1.jpg" width="224" hspace="10"/>
 </p>
 
