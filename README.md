@@ -38,7 +38,7 @@
 <!-- PROJECT SITE -->
 <h2 id="site">:earth_americas: Link do site </h2>
 <p>🔗 <a href="https://dizzy-future-eats.surge.sh/" target="_blank"> Future Eats </a>  </p>
-<a href="https://dizzy-future-eats.surge.sh/" onclick="return ! window.open(this.href);"> Open in a new window</a>
+<!-- <a href="https://dizzy-future-eats.surge.sh/" onclick="return ! window.open(this.href);"> Open in a new window</a> -->
 
 <!-- PROJECT TECHNOLOGIES -->
 <h2 id="tecnologias"> 🛠 Tecnologias </h2>
