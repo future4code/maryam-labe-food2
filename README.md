@@ -151,7 +151,7 @@ https://user-images.githubusercontent.com/78452566/140591159-22bf2556-e593-4532-
 <!-- PROJECT WIREFRAME  -->
 <h2 id="wireframe">:jigsaw: Wireframe</h2>
   <div align="center">
-    <img alt="Wireframe" src="https://user-images.githubusercontent.com/78452566/140319000-27aeae12-03d5-4975-8a72-84cf832fd186.png" />
+    <img alt="Wireframe" src="https://user-images.githubusercontent.com/78452566/140592206-6c16713b-412b-4266-a4c6-fd6ff0d62cf1.jpg" />
   </div>
 
 
